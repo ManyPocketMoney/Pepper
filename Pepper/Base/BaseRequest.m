@@ -17,10 +17,7 @@
 
 /// 设置baseUrl
 - (NSString *)baseUrl {
-    if ([NSString checkStringIsValided:[ZBUserManager customServiceUrl]]) {
-        return [ZBUserManager customServiceUrl];
-    }
-    return [ZBUserManager serviceUrl];
+    return @"";
 }
 
 /// 设置基本参数
@@ -31,9 +28,9 @@
 
 /// 设置请求头
 - (NSDictionary<NSString *,NSString *> *)requestHeaderFieldValueDictionary {
-    if ([ZBUserManager token]) {
-        return @{@"token":[ZBUserManager token]};
-    }
+//    if ([ZBUserManager token]) {
+//        return @{@"token":[ZBUserManager token]};
+//    }
     return nil;
 }
 
@@ -97,7 +94,7 @@
             alert.title(@"登录失效").actionTitles(@[@"重新登录"]);
         } handler:^(int index) {
             /// 退出登录
-            [ZBUserManager clear];
+//            [ZBUserManager clear];
             Class class = NSClassFromString(@"ZBLoginViewController");
             if (class) {
               UIViewController *ctrl = class.new;

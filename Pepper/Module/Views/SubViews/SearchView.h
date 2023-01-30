@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^SearchClick)(void);
+
 @interface SearchView : UIView
+
+@property (nonatomic, copy) SearchClick clickBlock;
 
 @end
 

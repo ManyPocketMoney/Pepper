@@ -6,8 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BaseNavigationController.h"
-#import "ZBToolView.h"
+//#import "BaseNavigationController.h"
+//#import "ZBToolView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -40,7 +40,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, assign) BOOL               navigationBarLeftButtonHidden;
 
 /// 按钮栏
-@property (nonatomic, strong) ZBToolView         *toolBarView;
+//@property (nonatomic, strong) ZBToolView         *toolBarView;
 
 /// 路由跳转页面数据回调
 @property (nonatomic, copy) void (^completion)(id);

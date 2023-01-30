@@ -7,9 +7,7 @@
 //
 
 #import "BaseNavigationController.h"
-#import <ANCore/ANCore.h>
-#import "ZBBaseViewController.h"
-#import "ZBMacros.h"
+
 
 @interface BaseNavigationController () <UIGestureRecognizerDelegate>
 
@@ -158,8 +156,8 @@
 }
 
 /// 当前baseVC
-- (ZBBaseViewController *)currentBaseVC {
-    return (ZBBaseViewController *)[NSObject currentActiveController];
+- (BaseViewController *)currentBaseVC {
+    return (BaseViewController *)[NSObject currentActiveController];
 }
 
 
@@ -179,10 +177,10 @@
 }
 
 - (void)rightNavigationBtnClick:(UIButton *)rightNavigationBtn {
-    ZBBaseViewController *currentVC = [self currentBaseVC];
+    BaseViewController *currentVC = [self currentBaseVC];
     /// 对于集合视图 获取当前视图为YN子视图 所以对于应用YN的VC 需要特别处理 否则导航栏的回调则不生效
     if ([currentVC.parentViewController isKindOfClass:NSClassFromString(@"YNPageViewController")]) {
-        currentVC = (ZBBaseViewController *)currentVC.parentViewController.parentViewController;
+        currentVC = (BaseViewController *)currentVC.parentViewController.parentViewController;
     }
     
     if (currentVC.navigationBarRightButtonClickBlock) {
@@ -227,7 +225,7 @@
     [self.rightBtn setTitle:title forState:UIControlStateNormal];
     [self.rightBtn setFrame:CGRectMake(0, 0, KNavBarHeight*2, KNavBarHeight)];
     [self.rightBtn addTarget:self  action:@selector(rightNavigationBtnClick:) forControlEvents:UIControlEventTouchUpInside];
-    [self.rightBtn setTitleColor:BASECOLOR_BLUE forState:UIControlStateNormal];
+    [self.rightBtn setTitleColor:BASECOLOR_GREEN forState:UIControlStateNormal];
     [self.rightBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentRight];
     [self.rightBtn titleLabel].font = FONTSIZE_REGULAR(14);
     UIBarButtonItem *rightBtnItem = [[UIBarButtonItem alloc] initWithCustomView:self.rightBtn];
@@ -275,7 +273,7 @@
         backBtn.margin = 3;
         [backBtn setFrame:CGRectMake(0, 0, KNavBarHeight*2, KNavBarHeight)];
         [backBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-        [backBtn setTitleColor:BASECOLOR_BLUE forState:UIControlStateNormal];
+        [backBtn setTitleColor:BASECOLOR_GREEN forState:UIControlStateNormal];
         [[backBtn titleLabel] setFont:FONTSIZE_REGULAR(14)];
         [backBtn setTitle:@"返回" forState:UIControlStateNormal];
         [backBtn setImage:[UIImage imageNamed:@"ZBCore.bundle/nav_left_back_default@3x.png"] forState:UIControlStateNormal];

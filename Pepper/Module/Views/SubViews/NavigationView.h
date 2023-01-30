@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^NavigationClick)(int i);
+
 @interface NavigationView : UIView
+
+@property (nonatomic, copy) NavigationClick clickBlock;
 
 @end
 

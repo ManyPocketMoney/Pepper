@@ -6,9 +6,7 @@
 //
 
 #import "BaseViewController.h"
-#import "IQKeyboardManager.h"
-#import "ZBMacros.h"
-#import "Macros.h"
+
 
 @interface BaseViewController () <UITableViewDelegate, UITableViewDataSource>
 
@@ -19,14 +17,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    [IQKeyboardManager sharedManager].toolbarDoneBarButtonItemText = @"完成";
+//    [IQKeyboardManager sharedManager].toolbarDoneBarButtonItemText = @"完成";
 }
 
 - (void)viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    CGFloat height = SCALE_SIZE(49)+KTabSpace;
-    self.toolBarView.frame = CGRectMake(0, iPhoneHeight-height-KtopHeitht, iPhoneWidth, height);
+//    CGFloat height = SCALE_SIZE(49)+KTabSpace;
+//    self.toolBarView.frame = CGRectMake(0, iPhoneHeight-height-KtopHeitht, iPhoneWidth, height);
 }
 
 #pragma mark - 创建tableview  tableview懒加载
@@ -57,13 +55,13 @@
     return _tableView;
 }
 
-- (ZBToolView *)toolBarView {
-    if (!_toolBarView) {
-        _toolBarView = [[ZBToolView alloc] init];
-        [self.view addSubview:_toolBarView];
-    }
-    return _toolBarView;
-}
+//- (ZBToolView *)toolBarView {
+//    if (!_toolBarView) {
+//        _toolBarView = [[ZBToolView alloc] init];
+//        [self.view addSubview:_toolBarView];
+//    }
+//    return _toolBarView;
+//}
 
 #pragma mark tableview delegate
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {

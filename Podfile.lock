@@ -1,0 +1,85 @@
+PODS:
+  - AFNetworking (4.0.1):
+    - AFNetworking/NSURLSession (= 4.0.1)
+    - AFNetworking/Reachability (= 4.0.1)
+    - AFNetworking/Security (= 4.0.1)
+    - AFNetworking/Serialization (= 4.0.1)
+    - AFNetworking/UIKit (= 4.0.1)
+  - AFNetworking/NSURLSession (4.0.1):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (4.0.1)
+  - AFNetworking/Security (4.0.1)
+  - AFNetworking/Serialization (4.0.1)
+  - AFNetworking/UIKit (4.0.1):
+    - AFNetworking/NSURLSession
+  - ANCore (0.7.5):
+    - ANCore/Category (= 0.7.5)
+    - ANCore/CrashGuard (= 0.7.5)
+    - ANCore/Macros (= 0.7.5)
+    - ANCore/Network (= 0.7.5)
+    - ANCore/OpenShareManager (= 0.7.5)
+    - ANCore/Router (= 0.7.5)
+    - ANCore/UI (= 0.7.5)
+    - ANCore/Utils (= 0.7.5)
+    - MBProgressHUD
+  - ANCore/Category (0.7.5):
+    - MBProgressHUD
+    - MJRefresh
+  - ANCore/CrashGuard (0.7.5):
+    - MBProgressHUD
+  - ANCore/Macros (0.7.5):
+    - MBProgressHUD
+  - ANCore/Network (0.7.5):
+    - AFNetworking
+    - MBProgressHUD
+  - ANCore/OpenShareManager (0.7.5):
+    - MBProgressHUD
+  - ANCore/Router (0.7.5):
+    - ANCore/Router/Handler (= 0.7.5)
+    - MBProgressHUD
+  - ANCore/Router/Handler (0.7.5):
+    - MBProgressHUD
+  - ANCore/UI (0.7.5):
+    - ANCore/Category
+    - ANCore/Macros
+    - MBProgressHUD
+  - ANCore/Utils (0.7.5):
+    - MBProgressHUD
+  - JSONModel (1.8.0)
+  - Masonry (1.1.0)
+  - MBProgressHUD (1.2.0)
+  - MJRefresh (3.7.5)
+  - SDWebImage (5.14.3):
+    - SDWebImage/Core (= 5.14.3)
+  - SDWebImage/Core (5.14.3)
+
+DEPENDENCIES:
+  - ANCore
+  - JSONModel
+  - Masonry
+  - SDWebImage
+
+SPEC REPOS:
+  trunk:
+    - AFNetworking
+    - ANCore
+    - JSONModel
+    - Masonry
+    - MBProgressHUD
+    - MJRefresh
+    - SDWebImage
+
+SPEC CHECKSUMS:
+  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
+  ANCore: 93abc6849ba685a4f8606bf7685d7826b837349e
+  JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
+  Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
+  MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406
+  MJRefresh: fdf5e979eb406a0341468932d1dfc8b7f9fce961
+  SDWebImage: 9c36e66c8ce4620b41a7407698dda44211a96764
+
+PODFILE CHECKSUM: b8f1072054fb9192467e8d0ab5baf9e66abab55c
+
+COCOAPODS: 1.11.3
