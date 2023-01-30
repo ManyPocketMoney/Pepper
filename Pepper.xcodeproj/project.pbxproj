@@ -1,0 +1,758 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 54;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		892DE05F68079BFCC8899DB3 /* libPods-Pepper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74922F0EF92FCD3CCEAF096A /* libPods-Pepper.a */; };
+		EF0D14FD2966AFF5005ADD55 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D14FB2966AFF5005ADD55 /* BaseRequest.m */; };
+		EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D14FE2966B01F005ADD55 /* NSString+Empty.m */; };
+		EF0D15032966BEE3005ADD55 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D15022966BEE3005ADD55 /* HomeViewController.m */; };
+		EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A12967B5B800185630 /* NavigationView.m */; };
+		EFB6E2A52967EC5500185630 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A42967EC5500185630 /* SearchView.m */; };
+		EFB6E2A82967F96500185630 /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A72967F96500185630 /* ScanView.m */; };
+		EFCC737529669E3B00FD69BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC737429669E3B00FD69BC /* AppDelegate.m */; };
+		EFCC737E29669E3B00FD69BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCC737C29669E3B00FD69BC /* Main.storyboard */; };
+		EFCC738029669E3D00FD69BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCC737F29669E3D00FD69BC /* Assets.xcassets */; };
+		EFCC738329669E3D00FD69BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCC738129669E3D00FD69BC /* LaunchScreen.storyboard */; };
+		EFCC738629669E3D00FD69BC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC738529669E3D00FD69BC /* main.m */; };
+		EFCC739029669E3D00FD69BC /* PepperTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC738F29669E3D00FD69BC /* PepperTests.m */; };
+		EFCC739A29669E3D00FD69BC /* PepperUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC739929669E3D00FD69BC /* PepperUITests.m */; };
+		EFCC739C29669E3D00FD69BC /* PepperUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC739B29669E3D00FD69BC /* PepperUITestsLaunchTests.m */; };
+		EFCC73B12966AA5000FD69BC /* ANRouterSpec+Pepper.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC73B02966AA5000FD69BC /* ANRouterSpec+Pepper.m */; };
+		EFCC73B42966AB9E00FD69BC /* BaseNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC73B22966AB9E00FD69BC /* BaseNavigationController.m */; };
+		EFCC73B72966ABD100FD69BC /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC73B52966ABD100FD69BC /* BaseViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EFCC738C29669E3D00FD69BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFCC736829669E3B00FD69BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFCC736F29669E3B00FD69BC;
+			remoteInfo = Pepper;
+		};
+		EFCC739629669E3D00FD69BC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EFCC736829669E3B00FD69BC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EFCC736F29669E3B00FD69BC;
+			remoteInfo = Pepper;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		478C8823267AFA32AE4C21DF /* Pods-Pepper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pepper.release.xcconfig"; path = "Target Support Files/Pods-Pepper/Pods-Pepper.release.xcconfig"; sourceTree = "<group>"; };
+		4B39E780C12B54FCAA16A528 /* Pods-Pepper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pepper.debug.xcconfig"; path = "Target Support Files/Pods-Pepper/Pods-Pepper.debug.xcconfig"; sourceTree = "<group>"; };
+		74922F0EF92FCD3CCEAF096A /* libPods-Pepper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pepper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF0D14FB2966AFF5005ADD55 /* BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
+		EF0D14FC2966AFF5005ADD55 /* BaseRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseRequest.h; sourceTree = "<group>"; };
+		EF0D14FE2966B01F005ADD55 /* NSString+Empty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Empty.m"; sourceTree = "<group>"; };
+		EF0D14FF2966B01F005ADD55 /* NSString+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Empty.h"; sourceTree = "<group>"; };
+		EF0D15012966BEE3005ADD55 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		EF0D15022966BEE3005ADD55 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		EFB6E2A02967B5B800185630 /* NavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationView.h; sourceTree = "<group>"; };
+		EFB6E2A12967B5B800185630 /* NavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationView.m; sourceTree = "<group>"; };
+		EFB6E2A32967EC5500185630 /* SearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
+		EFB6E2A42967EC5500185630 /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
+		EFB6E2A62967F96500185630 /* ScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanView.h; sourceTree = "<group>"; };
+		EFB6E2A72967F96500185630 /* ScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanView.m; sourceTree = "<group>"; };
+		EFCC737029669E3B00FD69BC /* Pepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCC737329669E3B00FD69BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EFCC737429669E3B00FD69BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EFCC737D29669E3B00FD69BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EFCC737F29669E3D00FD69BC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EFCC738229669E3D00FD69BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EFCC738429669E3D00FD69BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFCC738529669E3D00FD69BC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFCC738B29669E3D00FD69BC /* PepperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PepperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCC738F29669E3D00FD69BC /* PepperTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PepperTests.m; sourceTree = "<group>"; };
+		EFCC739529669E3D00FD69BC /* PepperUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PepperUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFCC739929669E3D00FD69BC /* PepperUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PepperUITests.m; sourceTree = "<group>"; };
+		EFCC739B29669E3D00FD69BC /* PepperUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PepperUITestsLaunchTests.m; sourceTree = "<group>"; };
+		EFCC73A92966A84300FD69BC /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		EFCC73AE2966A9CC00FD69BC /* HeaderMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeaderMacros.h; sourceTree = "<group>"; };
+		EFCC73AF2966AA5000FD69BC /* ANRouterSpec+Pepper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ANRouterSpec+Pepper.h"; sourceTree = "<group>"; };
+		EFCC73B02966AA5000FD69BC /* ANRouterSpec+Pepper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ANRouterSpec+Pepper.m"; sourceTree = "<group>"; };
+		EFCC73B22966AB9E00FD69BC /* BaseNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseNavigationController.m; sourceTree = "<group>"; };
+		EFCC73B32966AB9E00FD69BC /* BaseNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseNavigationController.h; sourceTree = "<group>"; };
+		EFCC73B52966ABD100FD69BC /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		EFCC73B62966ABD100FD69BC /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EFCC736D29669E3B00FD69BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				892DE05F68079BFCC8899DB3 /* libPods-Pepper.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCC738829669E3D00FD69BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCC739229669E3D00FD69BC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		652D1DB11E338CD21745BF9C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4B39E780C12B54FCAA16A528 /* Pods-Pepper.debug.xcconfig */,
+				478C8823267AFA32AE4C21DF /* Pods-Pepper.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		B3E2049265DF9FA66C73F421 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				74922F0EF92FCD3CCEAF096A /* libPods-Pepper.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF0D15042966BEE8005ADD55 /* Module */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E29E2967B4F000185630 /* Views */,
+			);
+			path = Module;
+			sourceTree = "<group>";
+		};
+		EFB6E29E2967B4F000185630 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E29F2967B4FE00185630 /* SubViews */,
+				EF0D15012966BEE3005ADD55 /* HomeViewController.h */,
+				EF0D15022966BEE3005ADD55 /* HomeViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFB6E29F2967B4FE00185630 /* SubViews */ = {
+			isa = PBXGroup;
+			children = (
+				EFB6E2A02967B5B800185630 /* NavigationView.h */,
+				EFB6E2A12967B5B800185630 /* NavigationView.m */,
+				EFB6E2A32967EC5500185630 /* SearchView.h */,
+				EFB6E2A42967EC5500185630 /* SearchView.m */,
+				EFB6E2A62967F96500185630 /* ScanView.h */,
+				EFB6E2A72967F96500185630 /* ScanView.m */,
+			);
+			path = SubViews;
+			sourceTree = "<group>";
+		};
+		EFCC736729669E3B00FD69BC = {
+			isa = PBXGroup;
+			children = (
+				EFCC737229669E3B00FD69BC /* Pepper */,
+				EFCC738E29669E3D00FD69BC /* PepperTests */,
+				EFCC739829669E3D00FD69BC /* PepperUITests */,
+				EFCC737129669E3B00FD69BC /* Products */,
+				652D1DB11E338CD21745BF9C /* Pods */,
+				B3E2049265DF9FA66C73F421 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		EFCC737129669E3B00FD69BC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EFCC737029669E3B00FD69BC /* Pepper.app */,
+				EFCC738B29669E3D00FD69BC /* PepperTests.xctest */,
+				EFCC739529669E3D00FD69BC /* PepperUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EFCC737229669E3B00FD69BC /* Pepper */ = {
+			isa = PBXGroup;
+			children = (
+				EF0D15042966BEE8005ADD55 /* Module */,
+				EFCC73AA2966A8A400FD69BC /* Base */,
+				EFCC737329669E3B00FD69BC /* AppDelegate.h */,
+				EFCC737429669E3B00FD69BC /* AppDelegate.m */,
+				EFCC737C29669E3B00FD69BC /* Main.storyboard */,
+				EFCC737F29669E3D00FD69BC /* Assets.xcassets */,
+				EFCC738129669E3D00FD69BC /* LaunchScreen.storyboard */,
+				EFCC738429669E3D00FD69BC /* Info.plist */,
+				EFCC738529669E3D00FD69BC /* main.m */,
+				EFCC73A92966A84300FD69BC /* PrefixHeader.pch */,
+			);
+			path = Pepper;
+			sourceTree = "<group>";
+		};
+		EFCC738E29669E3D00FD69BC /* PepperTests */ = {
+			isa = PBXGroup;
+			children = (
+				EFCC738F29669E3D00FD69BC /* PepperTests.m */,
+			);
+			path = PepperTests;
+			sourceTree = "<group>";
+		};
+		EFCC739829669E3D00FD69BC /* PepperUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EFCC739929669E3D00FD69BC /* PepperUITests.m */,
+				EFCC739B29669E3D00FD69BC /* PepperUITestsLaunchTests.m */,
+			);
+			path = PepperUITests;
+			sourceTree = "<group>";
+		};
+		EFCC73AA2966A8A400FD69BC /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				EFCC73AE2966A9CC00FD69BC /* HeaderMacros.h */,
+				EF0D14FF2966B01F005ADD55 /* NSString+Empty.h */,
+				EF0D14FE2966B01F005ADD55 /* NSString+Empty.m */,
+				EF0D14FC2966AFF5005ADD55 /* BaseRequest.h */,
+				EF0D14FB2966AFF5005ADD55 /* BaseRequest.m */,
+				EFCC73B62966ABD100FD69BC /* BaseViewController.h */,
+				EFCC73B52966ABD100FD69BC /* BaseViewController.m */,
+				EFCC73B32966AB9E00FD69BC /* BaseNavigationController.h */,
+				EFCC73B22966AB9E00FD69BC /* BaseNavigationController.m */,
+				EFCC73AF2966AA5000FD69BC /* ANRouterSpec+Pepper.h */,
+				EFCC73B02966AA5000FD69BC /* ANRouterSpec+Pepper.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EFCC736F29669E3B00FD69BC /* Pepper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCC739F29669E3D00FD69BC /* Build configuration list for PBXNativeTarget "Pepper" */;
+			buildPhases = (
+				9B593C970F8F6168BC6B48BB /* [CP] Check Pods Manifest.lock */,
+				EFCC736C29669E3B00FD69BC /* Sources */,
+				EFCC736D29669E3B00FD69BC /* Frameworks */,
+				EFCC736E29669E3B00FD69BC /* Resources */,
+				F87A1E0128B517120B7A9965 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pepper;
+			productName = Pepper;
+			productReference = EFCC737029669E3B00FD69BC /* Pepper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EFCC738A29669E3D00FD69BC /* PepperTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCC73A229669E3D00FD69BC /* Build configuration list for PBXNativeTarget "PepperTests" */;
+			buildPhases = (
+				EFCC738729669E3D00FD69BC /* Sources */,
+				EFCC738829669E3D00FD69BC /* Frameworks */,
+				EFCC738929669E3D00FD69BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFCC738D29669E3D00FD69BC /* PBXTargetDependency */,
+			);
+			name = PepperTests;
+			productName = PepperTests;
+			productReference = EFCC738B29669E3D00FD69BC /* PepperTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EFCC739429669E3D00FD69BC /* PepperUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFCC73A529669E3D00FD69BC /* Build configuration list for PBXNativeTarget "PepperUITests" */;
+			buildPhases = (
+				EFCC739129669E3D00FD69BC /* Sources */,
+				EFCC739229669E3D00FD69BC /* Frameworks */,
+				EFCC739329669E3D00FD69BC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EFCC739729669E3D00FD69BC /* PBXTargetDependency */,
+			);
+			name = PepperUITests;
+			productName = PepperUITests;
+			productReference = EFCC739529669E3D00FD69BC /* PepperUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EFCC736829669E3B00FD69BC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					EFCC736F29669E3B00FD69BC = {
+						CreatedOnToolsVersion = 14.2;
+					};
+					EFCC738A29669E3D00FD69BC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EFCC736F29669E3B00FD69BC;
+					};
+					EFCC739429669E3D00FD69BC = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = EFCC736F29669E3B00FD69BC;
+					};
+				};
+			};
+			buildConfigurationList = EFCC736B29669E3B00FD69BC /* Build configuration list for PBXProject "Pepper" */;
+			compatibilityVersion = "Xcode 12.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EFCC736729669E3B00FD69BC;
+			productRefGroup = EFCC737129669E3B00FD69BC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EFCC736F29669E3B00FD69BC /* Pepper */,
+				EFCC738A29669E3D00FD69BC /* PepperTests */,
+				EFCC739429669E3D00FD69BC /* PepperUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EFCC736E29669E3B00FD69BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCC738329669E3D00FD69BC /* LaunchScreen.storyboard in Resources */,
+				EFCC738029669E3D00FD69BC /* Assets.xcassets in Resources */,
+				EFCC737E29669E3B00FD69BC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCC738929669E3D00FD69BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCC739329669E3D00FD69BC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9B593C970F8F6168BC6B48BB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Pepper-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F87A1E0128B517120B7A9965 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pepper/Pods-Pepper-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Pepper/Pods-Pepper-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Pepper/Pods-Pepper-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EFCC736C29669E3B00FD69BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF0D14FD2966AFF5005ADD55 /* BaseRequest.m in Sources */,
+				EFCC73B72966ABD100FD69BC /* BaseViewController.m in Sources */,
+				EFCC737529669E3B00FD69BC /* AppDelegate.m in Sources */,
+				EFCC73B12966AA5000FD69BC /* ANRouterSpec+Pepper.m in Sources */,
+				EF0D15032966BEE3005ADD55 /* HomeViewController.m in Sources */,
+				EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */,
+				EFB6E2A82967F96500185630 /* ScanView.m in Sources */,
+				EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */,
+				EFCC738629669E3D00FD69BC /* main.m in Sources */,
+				EFB6E2A52967EC5500185630 /* SearchView.m in Sources */,
+				EFCC73B42966AB9E00FD69BC /* BaseNavigationController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCC738729669E3D00FD69BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCC739029669E3D00FD69BC /* PepperTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFCC739129669E3D00FD69BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFCC739C29669E3D00FD69BC /* PepperUITestsLaunchTests.m in Sources */,
+				EFCC739A29669E3D00FD69BC /* PepperUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EFCC738D29669E3D00FD69BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFCC736F29669E3B00FD69BC /* Pepper */;
+			targetProxy = EFCC738C29669E3D00FD69BC /* PBXContainerItemProxy */;
+		};
+		EFCC739729669E3D00FD69BC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EFCC736F29669E3B00FD69BC /* Pepper */;
+			targetProxy = EFCC739629669E3D00FD69BC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EFCC737C29669E3B00FD69BC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFCC737D29669E3B00FD69BC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EFCC738129669E3D00FD69BC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EFCC738229669E3D00FD69BC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EFCC739D29669E3D00FD69BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EFCC739E29669E3D00FD69BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EFCC73A029669E3D00FD69BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4B39E780C12B54FCAA16A528 /* Pods-Pepper.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHN7V8ZX49;
+				GCC_PREFIX_HEADER = Pepper/PrefixHeader.pch;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pepper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "青椒课堂";
+				INFOPLIST_KEY_NSCameraUsageDescription = "青椒课堂需要您的同意才能打开相机，用于拍摄头像照片";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gp.Pepper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EFCC73A129669E3D00FD69BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 478C8823267AFA32AE4C21DF /* Pods-Pepper.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHN7V8ZX49;
+				GCC_PREFIX_HEADER = Pepper/PrefixHeader.pch;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pepper/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "青椒课堂";
+				INFOPLIST_KEY_NSCameraUsageDescription = "青椒课堂需要您的同意才能打开相机，用于拍摄头像照片";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gp.Pepper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EFCC73A329669E3D00FD69BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHN7V8ZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gp.PepperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pepper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pepper";
+			};
+			name = Debug;
+		};
+		EFCC73A429669E3D00FD69BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHN7V8ZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gp.PepperTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pepper.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pepper";
+			};
+			name = Release;
+		};
+		EFCC73A629669E3D00FD69BC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHN7V8ZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gp.PepperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pepper;
+			};
+			name = Debug;
+		};
+		EFCC73A729669E3D00FD69BC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = XHN7V8ZX49;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gp.PepperUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Pepper;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EFCC736B29669E3B00FD69BC /* Build configuration list for PBXProject "Pepper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCC739D29669E3D00FD69BC /* Debug */,
+				EFCC739E29669E3D00FD69BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCC739F29669E3D00FD69BC /* Build configuration list for PBXNativeTarget "Pepper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCC73A029669E3D00FD69BC /* Debug */,
+				EFCC73A129669E3D00FD69BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCC73A229669E3D00FD69BC /* Build configuration list for PBXNativeTarget "PepperTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCC73A329669E3D00FD69BC /* Debug */,
+				EFCC73A429669E3D00FD69BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFCC73A529669E3D00FD69BC /* Build configuration list for PBXNativeTarget "PepperUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFCC73A629669E3D00FD69BC /* Debug */,
+				EFCC73A729669E3D00FD69BC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EFCC736829669E3B00FD69BC /* Project object */;
+}
