@@ -9,6 +9,7 @@
 #import "NavigationView.h"
 #import "SearchView.h"
 #import "ScanView.h"
+#import "QJPersonalViewController.h"
 
 @interface HomeViewController ()
 
@@ -27,6 +28,7 @@
     [self.view addSubview:self.navigationView];
     [self.scrollView addSubview:self.searchView];
     [self.scrollView addSubview:self.scanView];
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 #pragma marks - getters
@@ -38,6 +40,9 @@
             switch (i) {
                 case 1:
                     /// 头像
+                {
+                    [self pushPersonal];
+                }
                     break;
                 case 2:
                     /// 专注学习
@@ -53,6 +58,11 @@
         };
     }
     return _navigationView;
+}
+
+- (void)pushPersonal {
+    QJPersonalViewController *personal = [[QJPersonalViewController alloc] init];
+    [self.navigationController pushViewController:personal animated:YES];
 }
 
 - (UIScrollView *)scrollView {

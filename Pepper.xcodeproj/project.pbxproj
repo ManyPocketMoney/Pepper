@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		47F1542329891AB200C4C8A2 /* QJPersonalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F1542229891AB200C4C8A2 /* QJPersonalViewController.m */; };
+		47F1542629894B9000C4C8A2 /* QJPersonalTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 47F1542529894B9000C4C8A2 /* QJPersonalTableViewCell.m */; };
 		892DE05F68079BFCC8899DB3 /* libPods-Pepper.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 74922F0EF92FCD3CCEAF096A /* libPods-Pepper.a */; };
 		EF0D14FD2966AFF5005ADD55 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D14FB2966AFF5005ADD55 /* BaseRequest.m */; };
 		EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D14FE2966B01F005ADD55 /* NSString+Empty.m */; };
@@ -46,6 +48,10 @@
 
 /* Begin PBXFileReference section */
 		478C8823267AFA32AE4C21DF /* Pods-Pepper.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pepper.release.xcconfig"; path = "Target Support Files/Pods-Pepper/Pods-Pepper.release.xcconfig"; sourceTree = "<group>"; };
+		47F1542129891AB200C4C8A2 /* QJPersonalViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QJPersonalViewController.h; sourceTree = "<group>"; };
+		47F1542229891AB200C4C8A2 /* QJPersonalViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QJPersonalViewController.m; sourceTree = "<group>"; };
+		47F1542429894B9000C4C8A2 /* QJPersonalTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QJPersonalTableViewCell.h; sourceTree = "<group>"; };
+		47F1542529894B9000C4C8A2 /* QJPersonalTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QJPersonalTableViewCell.m; sourceTree = "<group>"; };
 		4B39E780C12B54FCAA16A528 /* Pods-Pepper.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Pepper.debug.xcconfig"; path = "Target Support Files/Pods-Pepper/Pods-Pepper.debug.xcconfig"; sourceTree = "<group>"; };
 		74922F0EF92FCD3CCEAF096A /* libPods-Pepper.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Pepper.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF0D14FB2966AFF5005ADD55 /* BaseRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseRequest.m; sourceTree = "<group>"; };
@@ -109,6 +115,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		47F1541F29891A4000C4C8A2 /* Personal */ = {
+			isa = PBXGroup;
+			children = (
+				47F1542029891A7C00C4C8A2 /* Views */,
+				47F1542129891AB200C4C8A2 /* QJPersonalViewController.h */,
+				47F1542229891AB200C4C8A2 /* QJPersonalViewController.m */,
+			);
+			path = Personal;
+			sourceTree = "<group>";
+		};
+		47F1542029891A7C00C4C8A2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				47F1542429894B9000C4C8A2 /* QJPersonalTableViewCell.h */,
+				47F1542529894B9000C4C8A2 /* QJPersonalTableViewCell.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		652D1DB11E338CD21745BF9C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +154,7 @@
 		EF0D15042966BEE8005ADD55 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				47F1541F29891A4000C4C8A2 /* Personal */,
 				EFB6E29E2967B4F000185630 /* Views */,
 			);
 			path = Module;
@@ -412,8 +438,10 @@
 				EF0D15032966BEE3005ADD55 /* HomeViewController.m in Sources */,
 				EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */,
 				EFB6E2A82967F96500185630 /* ScanView.m in Sources */,
+				47F1542329891AB200C4C8A2 /* QJPersonalViewController.m in Sources */,
 				EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */,
 				EFCC738629669E3D00FD69BC /* main.m in Sources */,
+				47F1542629894B9000C4C8A2 /* QJPersonalTableViewCell.m in Sources */,
 				EFB6E2A52967EC5500185630 /* SearchView.m in Sources */,
 				EFCC73B42966AB9E00FD69BC /* BaseNavigationController.m in Sources */,
 			);
