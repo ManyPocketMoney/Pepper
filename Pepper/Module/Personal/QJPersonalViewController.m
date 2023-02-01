@@ -50,7 +50,35 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    
+    if(indexPath.row == 3) {
+        // 自定义的CustomActivity，继承自UIActivity
+        // 2、初始化控制器，添加分享内容至控制器
+        UIActivityViewController *activityVC = [[UIActivityViewController alloc]initWithActivityItems:@[] applicationActivities:nil];
+        //        //不显示哪些分享平台(具体支持那些平台，可以查看Xcode的api)
+        activityVC.excludedActivityTypes = @[UIActivityTypeAirDrop,UIActivityTypeCopyToPasteboard,UIActivityTypeAddToReadingList];
+        activityVC.modalInPopover = NO;
+        // 3、设置回调
+        
+        // ios8.0 之后用此方法回调
+        UIActivityViewControllerCompletionWithItemsHandler itemsBlock = ^(UIActivityType __nullable activityType, BOOL completed, NSArray * __nullable returnedItems, NSError * __nullable activityError){
+            NSLog(@"activityType == %@",activityType);
+            if (completed == YES) {
+                NSLog(@"completed");
+                
+            }else{
+                NSLog(@"cancel");
+                
+            }
+        };
+        activityVC.completionWithItemsHandler = itemsBlock;
+        
+        if (dIS_IPAD) {
+            activityVC.popoverPresentationController.sourceView = self.view;
+            activityVC.popoverPresentationController.sourceRect = CGRectMake(self.view.bounds.size.width/2, self.view.bounds.size.height/4, 0, 0);
+        }
+        // 4、调用控制器
+        [self presentViewController:activityVC animated:YES completion:nil];
+    }
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
