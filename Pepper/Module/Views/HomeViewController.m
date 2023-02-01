@@ -10,6 +10,7 @@
 #import "SearchView.h"
 #import "ScanView.h"
 #import "TitleView.h"
+#import "QJPersonalViewController.h"
 
 @interface HomeViewController ()
 
@@ -44,6 +45,7 @@
 /// 拍照翻译点击
 - (void)translationBtnClick {
     
+    self.navigationController.navigationBar.hidden = YES;
 }
 
 #pragma marks - getters
@@ -55,6 +57,9 @@
             switch (i) {
                 case 1:
                     /// 头像
+                {
+                    [self pushPersonal];
+                }
                     break;
                 case 2:
                     /// 专注学习
@@ -70,6 +75,11 @@
         };
     }
     return _navigationView;
+}
+
+- (void)pushPersonal {
+    QJPersonalViewController *personal = [[QJPersonalViewController alloc] init];
+    [self.navigationController pushViewController:personal animated:YES];
 }
 
 - (UIScrollView *)scrollView {
@@ -132,4 +142,5 @@
     }
     return _hotTitleView;
 }
+
 @end

@@ -23,6 +23,8 @@
     Class class = NSClassFromString(@"HomeViewController");
     UIViewController *ctrl = class.new;
     self.window.rootViewController = ctrl;
+//    BaseNavigationController *nav = [[BaseNavigationController alloc] initWithRootViewController:ctrl];
+//    self.window.rootViewController = nav;
     
     return YES;
 }
