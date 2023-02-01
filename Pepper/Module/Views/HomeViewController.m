@@ -28,6 +28,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.navigationController.navigationBar.hidden = YES;
     self.view.backgroundColor = BASECOLOR_BACKGROUND_GRAY;
     [self.view addSubview:self.navigationView];
     [self.scrollView addSubview:self.searchView];
@@ -45,7 +46,7 @@
 /// 拍照翻译点击
 - (void)translationBtnClick {
     
-    self.navigationController.navigationBar.hidden = YES;
+    
 }
 
 #pragma marks - getters
