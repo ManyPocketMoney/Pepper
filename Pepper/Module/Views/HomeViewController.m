@@ -16,6 +16,8 @@
 @property (nonatomic, strong) SearchView *searchView;
 @property (nonatomic, strong) UIScrollView *scrollView;
 @property (nonatomic, strong) ScanView *scanView;
+@property (nonatomic, strong) UIButton *conversionBtn;
+@property (nonatomic, strong) UIButton *translationBtn;
 
 @end
 
@@ -27,6 +29,18 @@
     [self.view addSubview:self.navigationView];
     [self.scrollView addSubview:self.searchView];
     [self.scrollView addSubview:self.scanView];
+    [self.scrollView addSubview:self.conversionBtn];
+    [self.scrollView addSubview:self.translationBtn];
+}
+
+/// 文件转化点击
+- (void)conversionBtnClick {
+    
+}
+
+/// 拍照翻译点击
+- (void)translationBtnClick {
+    
 }
 
 #pragma marks - getters
@@ -76,9 +90,33 @@
 - (ScanView *)scanView {
     if (!_scanView) {
         _scanView = [[ScanView alloc] initWithFrame:CGRectMake(0, _searchView.frame.size.height+_searchView.frame.origin.y, iPhoneWidth, SCALE_SIZE(165))];
-        
     }
     return _scanView;
 }
 
+- (UIButton *)conversionBtn {
+    if (!_conversionBtn) {
+        _conversionBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _conversionBtn.frame = CGRectMake(SCALE_SIZE(8),
+                                          _scanView.frame.size.height+_scanView.frame.origin.y+SCALE_SIZE(15),
+                                          SCALE_SIZE(185),
+                                          SCALE_SIZE(120));
+        [_conversionBtn setBackgroundImage:[UIImage imageNamed:@"conversion"] forState:UIControlStateNormal];
+        [_conversionBtn addTarget:self action:@selector(conversionBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _conversionBtn;
+}
+
+- (UIButton *)translationBtn {
+    if (!_translationBtn) {
+        _translationBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+        _translationBtn.frame = CGRectMake(iPhoneWidth-SCALE_SIZE(193),
+                                           _scanView.frame.size.height+_scanView.frame.origin.y+SCALE_SIZE(15),
+                                           SCALE_SIZE(185),
+                                           SCALE_SIZE(120));
+        [_translationBtn setBackgroundImage:[UIImage imageNamed:@"translation"] forState:UIControlStateNormal];
+        [_translationBtn addTarget:self action:@selector(translationBtnClick) forControlEvents:UIControlEventTouchUpInside];
+    }
+    return _translationBtn;
+}
 @end
