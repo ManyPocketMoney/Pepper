@@ -14,6 +14,9 @@
 		EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A12967B5B800185630 /* NavigationView.m */; };
 		EFB6E2A52967EC5500185630 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A42967EC5500185630 /* SearchView.m */; };
 		EFB6E2A82967F96500185630 /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A72967F96500185630 /* ScanView.m */; };
+		EFBF77F6298A5AA200048CDE /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77F5298A5AA200048CDE /* TitleView.m */; };
+		EFBF77FA298A606800048CDE /* HotView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77F9298A606800048CDE /* HotView.m */; };
+		EFBF77FD298A629500048CDE /* HotCourseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77FC298A629500048CDE /* HotCourseRequest.m */; };
 		EFCC737529669E3B00FD69BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC737429669E3B00FD69BC /* AppDelegate.m */; };
 		EFCC737E29669E3B00FD69BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCC737C29669E3B00FD69BC /* Main.storyboard */; };
 		EFCC738029669E3D00FD69BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCC737F29669E3D00FD69BC /* Assets.xcassets */; };
@@ -60,6 +63,12 @@
 		EFB6E2A42967EC5500185630 /* SearchView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SearchView.m; sourceTree = "<group>"; };
 		EFB6E2A62967F96500185630 /* ScanView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ScanView.h; sourceTree = "<group>"; };
 		EFB6E2A72967F96500185630 /* ScanView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScanView.m; sourceTree = "<group>"; };
+		EFBF77F4298A5AA200048CDE /* TitleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TitleView.h; sourceTree = "<group>"; };
+		EFBF77F5298A5AA200048CDE /* TitleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TitleView.m; sourceTree = "<group>"; };
+		EFBF77F8298A606800048CDE /* HotView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotView.h; sourceTree = "<group>"; };
+		EFBF77F9298A606800048CDE /* HotView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotView.m; sourceTree = "<group>"; };
+		EFBF77FB298A629500048CDE /* HotCourseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotCourseRequest.h; sourceTree = "<group>"; };
+		EFBF77FC298A629500048CDE /* HotCourseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotCourseRequest.m; sourceTree = "<group>"; };
 		EFCC737029669E3B00FD69BC /* Pepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCC737329669E3B00FD69BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFCC737429669E3B00FD69BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -137,6 +146,7 @@
 		EFB6E29E2967B4F000185630 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EFBF77F7298A5E9F00048CDE /* Request */,
 				EFB6E29F2967B4FE00185630 /* SubViews */,
 				EF0D15012966BEE3005ADD55 /* HomeViewController.h */,
 				EF0D15022966BEE3005ADD55 /* HomeViewController.m */,
@@ -153,8 +163,21 @@
 				EFB6E2A42967EC5500185630 /* SearchView.m */,
 				EFB6E2A62967F96500185630 /* ScanView.h */,
 				EFB6E2A72967F96500185630 /* ScanView.m */,
+				EFBF77F4298A5AA200048CDE /* TitleView.h */,
+				EFBF77F5298A5AA200048CDE /* TitleView.m */,
+				EFBF77F8298A606800048CDE /* HotView.h */,
+				EFBF77F9298A606800048CDE /* HotView.m */,
 			);
 			path = SubViews;
+			sourceTree = "<group>";
+		};
+		EFBF77F7298A5E9F00048CDE /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EFBF77FB298A629500048CDE /* HotCourseRequest.h */,
+				EFBF77FC298A629500048CDE /* HotCourseRequest.m */,
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 		EFCC736729669E3B00FD69BC = {
@@ -408,10 +431,13 @@
 				EF0D14FD2966AFF5005ADD55 /* BaseRequest.m in Sources */,
 				EFCC73B72966ABD100FD69BC /* BaseViewController.m in Sources */,
 				EFCC737529669E3B00FD69BC /* AppDelegate.m in Sources */,
+				EFBF77FA298A606800048CDE /* HotView.m in Sources */,
+				EFBF77FD298A629500048CDE /* HotCourseRequest.m in Sources */,
 				EFCC73B12966AA5000FD69BC /* ANRouterSpec+Pepper.m in Sources */,
 				EF0D15032966BEE3005ADD55 /* HomeViewController.m in Sources */,
 				EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */,
 				EFB6E2A82967F96500185630 /* ScanView.m in Sources */,
+				EFBF77F6298A5AA200048CDE /* TitleView.m in Sources */,
 				EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */,
 				EFCC738629669E3D00FD69BC /* main.m in Sources */,
 				EFB6E2A52967EC5500185630 /* SearchView.m in Sources */,

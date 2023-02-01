@@ -9,6 +9,7 @@
 #import "NavigationView.h"
 #import "SearchView.h"
 #import "ScanView.h"
+#import "TitleView.h"
 
 @interface HomeViewController ()
 
@@ -18,6 +19,7 @@
 @property (nonatomic, strong) ScanView *scanView;
 @property (nonatomic, strong) UIButton *conversionBtn;
 @property (nonatomic, strong) UIButton *translationBtn;
+@property (nonatomic, strong) TitleView *hotTitleView;
 
 @end
 
@@ -31,6 +33,7 @@
     [self.scrollView addSubview:self.scanView];
     [self.scrollView addSubview:self.conversionBtn];
     [self.scrollView addSubview:self.translationBtn];
+    [self.scrollView addSubview:self.hotTitleView];
 }
 
 /// 文件转化点击
@@ -118,5 +121,15 @@
         [_translationBtn addTarget:self action:@selector(translationBtnClick) forControlEvents:UIControlEventTouchUpInside];
     }
     return _translationBtn;
+}
+
+- (TitleView *)hotTitleView {
+    if (!_hotTitleView) {
+        _hotTitleView = [[TitleView alloc] initWithFrame:CGRectMake(0, _conversionBtn.frame.size.height+_conversionBtn.frame.origin.y+SCALE_SIZE(15), iPhoneWidth, SCALE_SIZE(30)) title:@"热门课程"];
+        _hotTitleView.block = ^{
+            
+        };
+    }
+    return _hotTitleView;
 }
 @end

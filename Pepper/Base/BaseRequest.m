@@ -17,7 +17,7 @@
 
 /// 设置baseUrl
 - (NSString *)baseUrl {
-    return @"";
+    return @"http://59.110.169.244:10110/docs/api-docs.json";
 }
 
 /// 设置基本参数
