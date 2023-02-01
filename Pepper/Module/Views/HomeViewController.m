@@ -11,6 +11,7 @@
 #import "ScanView.h"
 #import "TitleView.h"
 #import "QJPersonalViewController.h"
+#import "QJTakePhotoViewController.h"
 
 @interface HomeViewController ()
 
@@ -45,8 +46,8 @@
 
 /// 拍照翻译点击
 - (void)translationBtnClick {
-    
-    
+    QJTakePhotoViewController *photo = [[QJTakePhotoViewController alloc] init];
+    [self.navigationController pushViewController:photo animated:YES];
 }
 
 #pragma marks - getters
