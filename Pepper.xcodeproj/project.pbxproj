@@ -15,6 +15,8 @@
 		EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D14FE2966B01F005ADD55 /* NSString+Empty.m */; };
 		EF0D15032966BEE3005ADD55 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D15022966BEE3005ADD55 /* HomeViewController.m */; };
 		EFB6D61D298B9A60001D5834 /* UIImage+ZBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6D61C298B9A60001D5834 /* UIImage+ZBColor.m */; };
+		EFB6D620298BA153001D5834 /* HotCourseListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6D61F298BA153001D5834 /* HotCourseListRequest.m */; };
+		EFB6D623298BA44B001D5834 /* HotCourseView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6D622298BA44B001D5834 /* HotCourseView.m */; };
 		EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A12967B5B800185630 /* NavigationView.m */; };
 		EFB6E2A52967EC5500185630 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A42967EC5500185630 /* SearchView.m */; };
 		EFB6E2A82967F96500185630 /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A72967F96500185630 /* ScanView.m */; };
@@ -69,6 +71,10 @@
 		EF0D15022966BEE3005ADD55 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 		EFB6D61B298B9A60001D5834 /* UIImage+ZBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZBColor.h"; sourceTree = "<group>"; };
 		EFB6D61C298B9A60001D5834 /* UIImage+ZBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZBColor.m"; sourceTree = "<group>"; };
+		EFB6D61E298BA153001D5834 /* HotCourseListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotCourseListRequest.h; sourceTree = "<group>"; };
+		EFB6D61F298BA153001D5834 /* HotCourseListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotCourseListRequest.m; sourceTree = "<group>"; };
+		EFB6D621298BA44B001D5834 /* HotCourseView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotCourseView.h; sourceTree = "<group>"; };
+		EFB6D622298BA44B001D5834 /* HotCourseView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotCourseView.m; sourceTree = "<group>"; };
 		EFB6E2A02967B5B800185630 /* NavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationView.h; sourceTree = "<group>"; };
 		EFB6E2A12967B5B800185630 /* NavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationView.m; sourceTree = "<group>"; };
 		EFB6E2A32967EC5500185630 /* SearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
@@ -217,6 +223,8 @@
 				EFBF77F5298A5AA200048CDE /* TitleView.m */,
 				EFBF77F8298A606800048CDE /* HotView.h */,
 				EFBF77F9298A606800048CDE /* HotView.m */,
+				EFB6D621298BA44B001D5834 /* HotCourseView.h */,
+				EFB6D622298BA44B001D5834 /* HotCourseView.m */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -226,6 +234,8 @@
 			children = (
 				EFBF77FB298A629500048CDE /* HotCourseRequest.h */,
 				EFBF77FC298A629500048CDE /* HotCourseRequest.m */,
+				EFB6D61E298BA153001D5834 /* HotCourseListRequest.h */,
+				EFB6D61F298BA153001D5834 /* HotCourseListRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -487,6 +497,7 @@
 				EFBF77FD298A629500048CDE /* HotCourseRequest.m in Sources */,
 				EFCC73B12966AA5000FD69BC /* ANRouterSpec+Pepper.m in Sources */,
 				EF0D15032966BEE3005ADD55 /* HomeViewController.m in Sources */,
+				EFB6D623298BA44B001D5834 /* HotCourseView.m in Sources */,
 				EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */,
 				EFB6E2A82967F96500185630 /* ScanView.m in Sources */,
 				EFBF77F6298A5AA200048CDE /* TitleView.m in Sources */,
@@ -497,6 +508,7 @@
 				EFCC738629669E3D00FD69BC /* main.m in Sources */,
 				47F1542629894B9000C4C8A2 /* QJPersonalTableViewCell.m in Sources */,
 				47F1542A298A570100C4C8A2 /* QJTakePhotoViewController.m in Sources */,
+				EFB6D620298BA153001D5834 /* HotCourseListRequest.m in Sources */,
 				EFB6E2A52967EC5500185630 /* SearchView.m in Sources */,
 				EFCC73B42966AB9E00FD69BC /* BaseNavigationController.m in Sources */,
 				EFB6D61D298B9A60001D5834 /* UIImage+ZBColor.m in Sources */,

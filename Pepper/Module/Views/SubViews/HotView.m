@@ -59,7 +59,7 @@
         
         if (i == 0) {
             button.selected = YES;
-            
+            self.block(0);
         }
     }
 }
@@ -70,6 +70,7 @@
         btn.selected = NO;
     }
     button.selected = YES;
+    self.block(button.tag-100);
 }
 
 @end

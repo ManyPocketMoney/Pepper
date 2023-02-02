@@ -13,6 +13,8 @@
 #import "QJPersonalViewController.h"
 #import "QJTakePhotoViewController.h"
 #import "HotView.h"
+#import "HotCourseListRequest.h"
+#import "HotCourseView.h"
 
 @interface HomeViewController ()
 
@@ -51,6 +53,37 @@
 - (void)translationBtnClick {
     QJTakePhotoViewController *photo = [[QJTakePhotoViewController alloc] init];
     [self.navigationController pushViewController:photo animated:YES];
+}
+
+- (void)getCourseListWithType:(int)type {
+    type = 10;
+    HotCourseListRequest *request = [[HotCourseListRequest alloc] initWithType:type];
+    [request netRequestWithSuccess:^(id  _Nonnull response) {
+        [self createCourseList:response[@"data"]];
+    } error:^{
+        
+    } failure:^(NSString * _Nonnull msg) {
+        
+    }];
+}
+
+- (void)createCourseList:(NSArray *)array {
+    
+    for (int i = 0; i < 3; i++) {
+        UIView *view = [self.scrollView viewWithTag:200+i];
+        [view removeFromSuperview];
+    }
+    NSInteger count = array.count;
+    if (count > 3) {
+        count = 3;
+    }
+    
+    for (int i = 0; i < count; i++) {
+        HotCourseView *view = [[HotCourseView alloc] initWithFrame:CGRectMake(SCALE_SIZE(15), _hotView.frame.size.height+_hotView.frame.origin.y+SCALE_SIZE(18)+SCALE_SIZE(120)*i, iPhoneWidth-SCALE_SIZE(30), SCALE_SIZE(106)) data:array[i]];
+        view.tag = 200 + i;
+        [self.scrollView addSubview:view];
+    }
+    
 }
 
 #pragma marks - getters
@@ -152,7 +185,11 @@
 - (HotView *)hotView {
     if (!_hotView) {
         _hotView = [[HotView alloc] initWithFrame:CGRectMake(0, _hotTitleView.frame.size.height+_hotTitleView.frame.origin.y+SCALE_SIZE(10), iPhoneWidth, SCALE_SIZE(35))];
-        
+        @weakify(self);
+        _hotView.block = ^(int type) {
+            @strongify(self);
+            [self getCourseListWithType:type];
+        };
     }
     return _hotView;
 }

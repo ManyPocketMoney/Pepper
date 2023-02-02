@@ -17,14 +17,5 @@
     return RequestMethodTypeGET;
 }
 
-/// 请求参数
-//- (nullable id)requestArgument {
-//    NSMutableDictionary *params = [[super requestArgument] mutableCopy];
-//    [params setObject:[NSNumber numberWithInt:999] forKey:@"limit"];
-//    [params setObject:[NSNumber numberWithInt:1] forKey:@"currPage"];
-//
-//
-//    return params;
-//}
 
 @end
