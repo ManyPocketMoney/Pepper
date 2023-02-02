@@ -81,12 +81,14 @@
         @strongify(self);
         self.interactivePopGestureRecognizer.delegate = (id)self;
     }
+    
+    self.navigationBarTitleColor = [UIColor whiteColor];
 }
 
 - (UINavigationBarAppearance *)navBarAppearance {
     if (!_navBarAppearance) {
         _navBarAppearance = [UINavigationBarAppearance new];
-        _navBarAppearance.backgroundColor = [UIColor whiteColor];
+        _navBarAppearance.backgroundColor = BASECOLOR_GREEN;
         _navBarAppearance.backgroundEffect = nil;
         _navBarAppearance.shadowColor = [UIColor clearColor];
     }
@@ -269,15 +271,15 @@
 - (UIBarButtonItem *)leftBtnItem {
     if (!_leftBtnItem) {
         ANButton *backBtn = [ANButton buttonWithType:UIButtonTypeCustom];
-        backBtn.style = ANImagePositionLeft;
-        backBtn.margin = 3;
+//        backBtn.style = ANImagePositionLeft;
+//        backBtn.margin = 3;
         [backBtn setFrame:CGRectMake(0, 0, KNavBarHeight*2, KNavBarHeight)];
         [backBtn setContentHorizontalAlignment:UIControlContentHorizontalAlignmentLeft];
-        [backBtn setTitleColor:BASECOLOR_GREEN forState:UIControlStateNormal];
-        [[backBtn titleLabel] setFont:FONTSIZE_REGULAR(14)];
-        [backBtn setTitle:@"返回" forState:UIControlStateNormal];
-        [backBtn setImage:[UIImage imageNamed:@"ZBCore.bundle/nav_left_back_default@3x.png"] forState:UIControlStateNormal];
-        [backBtn setImage:[UIImage imageNamed:@"ZBCore.bundle/nav_left_back_default@3x.png"] forState:UIControlStateHighlighted];
+//        [backBtn setTitleColor:BASECOLOR_GREEN forState:UIControlStateNormal];
+//        [[backBtn titleLabel] setFont:FONTSIZE_REGULAR(14)];
+//        [backBtn setTitle:@"返回" forState:UIControlStateNormal];
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateNormal];
+        [backBtn setImage:[UIImage imageNamed:@"back"] forState:UIControlStateHighlighted];
         [backBtn addTarget:self action:@selector(leftNavigationBtnClick:) forControlEvents:UIControlEventTouchUpInside];
         _leftBtnItem = [[UIBarButtonItem alloc] initWithCustomView:backBtn];
     }

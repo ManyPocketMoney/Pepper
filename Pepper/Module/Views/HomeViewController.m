@@ -12,6 +12,7 @@
 #import "TitleView.h"
 #import "QJPersonalViewController.h"
 #import "QJTakePhotoViewController.h"
+#import "HotView.h"
 
 @interface HomeViewController ()
 
@@ -22,6 +23,7 @@
 @property (nonatomic, strong) UIButton *conversionBtn;
 @property (nonatomic, strong) UIButton *translationBtn;
 @property (nonatomic, strong) TitleView *hotTitleView;
+@property (nonatomic, strong) HotView *hotView;
 
 @end
 
@@ -37,6 +39,7 @@
     [self.scrollView addSubview:self.conversionBtn];
     [self.scrollView addSubview:self.translationBtn];
     [self.scrollView addSubview:self.hotTitleView];
+    [self.scrollView addSubview:self.hotView];
 }
 
 /// 文件转化点击
@@ -54,12 +57,13 @@
 - (NavigationView *)navigationView {
     if (!_navigationView) {
         _navigationView = [[NavigationView alloc] initWithFrame:CGRectMake(0, KStatusBarHeight, iPhoneWidth, SCALE_SIZE(70))];
-        
+        @weakify(self);
         _navigationView.clickBlock = ^(int i) {
             switch (i) {
                 case 1:
                     /// 头像
                 {
+                    @strongify(self);
                     [self pushPersonal];
                 }
                     break;
@@ -143,6 +147,14 @@
         };
     }
     return _hotTitleView;
+}
+
+- (HotView *)hotView {
+    if (!_hotView) {
+        _hotView = [[HotView alloc] initWithFrame:CGRectMake(0, _hotTitleView.frame.size.height+_hotTitleView.frame.origin.y+SCALE_SIZE(10), iPhoneWidth, SCALE_SIZE(35))];
+        
+    }
+    return _hotView;
 }
 
 @end

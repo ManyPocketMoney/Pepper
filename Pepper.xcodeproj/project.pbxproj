@@ -14,6 +14,7 @@
 		EF0D14FD2966AFF5005ADD55 /* BaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D14FB2966AFF5005ADD55 /* BaseRequest.m */; };
 		EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D14FE2966B01F005ADD55 /* NSString+Empty.m */; };
 		EF0D15032966BEE3005ADD55 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0D15022966BEE3005ADD55 /* HomeViewController.m */; };
+		EFB6D61D298B9A60001D5834 /* UIImage+ZBColor.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6D61C298B9A60001D5834 /* UIImage+ZBColor.m */; };
 		EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A12967B5B800185630 /* NavigationView.m */; };
 		EFB6E2A52967EC5500185630 /* SearchView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A42967EC5500185630 /* SearchView.m */; };
 		EFB6E2A82967F96500185630 /* ScanView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFB6E2A72967F96500185630 /* ScanView.m */; };
@@ -66,6 +67,8 @@
 		EF0D14FF2966B01F005ADD55 /* NSString+Empty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Empty.h"; sourceTree = "<group>"; };
 		EF0D15012966BEE3005ADD55 /* HomeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		EF0D15022966BEE3005ADD55 /* HomeViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		EFB6D61B298B9A60001D5834 /* UIImage+ZBColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ZBColor.h"; sourceTree = "<group>"; };
+		EFB6D61C298B9A60001D5834 /* UIImage+ZBColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ZBColor.m"; sourceTree = "<group>"; };
 		EFB6E2A02967B5B800185630 /* NavigationView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NavigationView.h; sourceTree = "<group>"; };
 		EFB6E2A12967B5B800185630 /* NavigationView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NavigationView.m; sourceTree = "<group>"; };
 		EFB6E2A32967EC5500185630 /* SearchView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SearchView.h; sourceTree = "<group>"; };
@@ -286,6 +289,8 @@
 		EFCC73AA2966A8A400FD69BC /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				EFB6D61B298B9A60001D5834 /* UIImage+ZBColor.h */,
+				EFB6D61C298B9A60001D5834 /* UIImage+ZBColor.m */,
 				EFCC73AE2966A9CC00FD69BC /* HeaderMacros.h */,
 				EF0D14FF2966B01F005ADD55 /* NSString+Empty.h */,
 				EF0D14FE2966B01F005ADD55 /* NSString+Empty.m */,
@@ -494,6 +499,7 @@
 				47F1542A298A570100C4C8A2 /* QJTakePhotoViewController.m in Sources */,
 				EFB6E2A52967EC5500185630 /* SearchView.m in Sources */,
 				EFCC73B42966AB9E00FD69BC /* BaseNavigationController.m in Sources */,
+				EFB6D61D298B9A60001D5834 /* UIImage+ZBColor.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

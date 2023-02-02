@@ -9,7 +9,7 @@
 #import "NSString+Empty.h"
 
 
-#define RequestSuccessCode   200
+#define RequestSuccessCode   0
 #define RequestLogAgainCode  399
 
 /// 网络请求基类
@@ -17,7 +17,7 @@
 
 /// 设置baseUrl
 - (NSString *)baseUrl {
-    return @"http://59.110.169.244:10110/docs/api-docs.json";
+    return @"http://59.110.169.244:10110";
 }
 
 /// 设置基本参数
