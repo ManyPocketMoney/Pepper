@@ -36,7 +36,7 @@
         }];
         
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.text = @"EXCEL精选";
+        titleLabel.text = data[@"special"][@"title"];
         titleLabel.font = FONTSIZE_MEDIUM(14);
         titleLabel.textColor = BASECOLOR_GREEN;
         [self addSubview:titleLabel];

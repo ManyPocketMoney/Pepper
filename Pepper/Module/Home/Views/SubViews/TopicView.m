@@ -23,7 +23,7 @@
         
         
         UIImageView *imgView = [[UIImageView alloc] init];
-        [imgView sd_setImageWithURL:[NSURL URLWithString:@""] placeholderImage:[UIImage imageNamed:@"placeholder_topic"]];
+        [imgView sd_setImageWithURL:[NSURL URLWithString:data[@"image"]] placeholderImage:[UIImage imageNamed:@"placeholder_topic"]];
         imgView.contentMode = UIViewContentModeScaleAspectFill;
         imgView.layer.masksToBounds = YES;
 //        [imgView zy_cornerRadiusAdvance:20 rectCornerType:UIRectCornerTopLeft|UIRectCornerBottomLeft];
@@ -47,7 +47,7 @@
 //        }];
         
         UILabel *titleLabel = [[UILabel alloc] init];
-        titleLabel.text = @"专辑名称专辑名称专辑...";
+        titleLabel.text = data[@"title"];
         titleLabel.font = FONTSIZE_MEDIUM(16);
         titleLabel.textColor = BASECOLOR_BLACK_333;
 //        detailLabel.numberOfLines = 0;
@@ -60,7 +60,7 @@
         }];
         
         UILabel *detailLabel = [[UILabel alloc] init];
-        detailLabel.text = @"5个课程内容";
+        detailLabel.text = [NSString stringWithFormat:@"%@个课程内容",data[@"management_count"]];
         detailLabel.font = FONTSIZE_MEDIUM(12);
         detailLabel.textColor = BASECOLOR_BLACK_999;
 //        detailLabel.numberOfLines = 0;
@@ -70,7 +70,7 @@
         
         ANButton *browseBtn = [ANButton buttonWithType:UIButtonTypeCustom];
         [browseBtn setImage:[UIImage imageNamed:@"browse"] forState:UIControlStateNormal];
-        [browseBtn setTitle:[NSString stringWithFormat:@"%@",@"666"]  forState:UIControlStateNormal];
+        [browseBtn setTitle:[NSString stringWithFormat:@"%@",data[@"browse"]]  forState:UIControlStateNormal];
         [[browseBtn titleLabel] setFont:FONTSIZE_REGULAR(14)];
         [browseBtn setTitleColor:BASECOLOR_BLACK_999 forState:UIControlStateNormal];
         browseBtn.style = ANImagePositionLeft;

@@ -102,20 +102,17 @@
 
 /// 专题数据rr
 - (void)getTopicData {
-    [self createTopic:@[]];
-//    TopicRequest *request = [[TopicRequest alloc] init];
-//    [request netRequestWithSuccess:^(id  _Nonnull response) {
-//        [self createTopic:response[@"data"]];
-//    } error:^{
-//
-//    } failure:^(NSString * _Nonnull msg) {
-//
-//    }];
+    TopicRequest *request = [[TopicRequest alloc] init];
+    [request netRequestWithSuccess:^(id  _Nonnull response) {
+        [self createTopic:response[@"data"]];
+    } error:^{
+
+    } failure:^(NSString * _Nonnull msg) {
+
+    }];
 }
 
 - (void)createTopic:(NSArray *)array {
-   
-    array = @[@"",@"",@""];
     NSInteger count = array.count;
     if (count > 3) {
         count = 3;
@@ -123,7 +120,6 @@
     
     for (int i = 0; i < count; i++) {
         TopicView *view = [[TopicView alloc] initWithFrame:CGRectMake(SCALE_SIZE(15)+SCALE_SIZE(245)*i, 0, SCALE_SIZE(230), SCALE_SIZE(183)) data:array[i]];
-//        view.tag = 300 + i;
         [self.topicScrollView addSubview:view];
     }
     self.topicScrollView.contentSize = CGSizeMake(SCALE_SIZE(15)+SCALE_SIZE(245)*count, 0);

@@ -10,7 +10,7 @@
 @implementation TopicRequest
 
 - (NSString *)requestUrl {
-    return @"/spanish/paprika/specical/view";
+    return @"/spanish/paprika/special/view";
 }
 
 - (RequestMethodType)requestMethodType {
