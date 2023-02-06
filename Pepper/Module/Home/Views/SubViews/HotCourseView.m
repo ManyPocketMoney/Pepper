@@ -50,10 +50,12 @@
         detailLabel.text = data[@"headline"];
         detailLabel.font = FONTSIZE_MEDIUM(16);
         detailLabel.textColor = BASECOLOR_BLACK_333;
+        detailLabel.numberOfLines = 0;
         [self addSubview:detailLabel];
         
         [detailLabel mas_makeConstraints:^(MASConstraintMaker *make) {
             make.left.equalTo(imgView.mas_right).offset(SCALE_SIZE(25));
+            make.right.equalTo(self).offset(-SCALE_SIZE(10));
             make.top.equalTo(titleLabel.mas_bottom).offset(SCALE_SIZE(5));
         }];
         

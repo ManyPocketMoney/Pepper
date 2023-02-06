@@ -15,6 +15,8 @@
 #import "HotView.h"
 #import "HotCourseListRequest.h"
 #import "HotCourseView.h"
+#import "TopicView.h"
+#import "TopicRequest.h"
 
 @interface HomeViewController ()
 
@@ -26,6 +28,10 @@
 @property (nonatomic, strong) UIButton *translationBtn;
 @property (nonatomic, strong) TitleView *hotTitleView;
 @property (nonatomic, strong) HotView *hotView;
+@property (nonatomic, strong) TitleView *topicTitleView;
+@property (nonatomic, assign) NSUInteger hotCount;
+@property (nonatomic, strong) NSArray *topicData;
+@property (nonatomic, strong) UIScrollView *topicScrollView;
 
 @end
 
@@ -42,6 +48,11 @@
     [self.scrollView addSubview:self.translationBtn];
     [self.scrollView addSubview:self.hotTitleView];
     [self.scrollView addSubview:self.hotView];
+    [self.scrollView addSubview:self.topicTitleView];
+    [self.scrollView addSubview:self.topicScrollView];
+    
+    [self getTopicData];
+    
 }
 
 /// 文件转化点击
@@ -56,7 +67,6 @@
 }
 
 - (void)getCourseListWithType:(int)type {
-    type = 10;
     HotCourseListRequest *request = [[HotCourseListRequest alloc] initWithType:type];
     [request netRequestWithSuccess:^(id  _Nonnull response) {
         [self createCourseList:response[@"data"]];
@@ -67,22 +77,56 @@
     }];
 }
 
+/// 热门课程
 - (void)createCourseList:(NSArray *)array {
     
     for (int i = 0; i < 3; i++) {
         UIView *view = [self.scrollView viewWithTag:200+i];
         [view removeFromSuperview];
     }
+    self.hotCount = array.count;
+    if (self.hotCount > 3) {
+        self.hotCount = 3;
+    }
+    
+    for (int i = 0; i < self.hotCount; i++) {
+        HotCourseView *view = [[HotCourseView alloc] initWithFrame:CGRectMake(SCALE_SIZE(15), _hotView.frame.size.height+_hotView.frame.origin.y+SCALE_SIZE(18)+SCALE_SIZE(120)*i, iPhoneWidth-SCALE_SIZE(30), SCALE_SIZE(106)) data:array[i]];
+        view.tag = 200 + i;
+        [self.scrollView addSubview:view];
+    }
+    
+    self.topicTitleView.frame = CGRectMake(0, _hotView.frame.size.height+_hotView.frame.origin.y+SCALE_SIZE(18)+SCALE_SIZE(120)*self.hotCount, iPhoneWidth, SCALE_SIZE(30));
+    self.topicScrollView.frame = CGRectMake(0, _topicTitleView.frame.size.height+_topicTitleView.frame.origin.y+SCALE_SIZE(15), iPhoneWidth, SCALE_SIZE(183));
+    self.scrollView.contentSize = CGSizeMake(0, _topicTitleView.frame.size.height+_topicTitleView.frame.origin.y+SCALE_SIZE(193));
+}
+
+/// 专题数据rr
+- (void)getTopicData {
+    [self createTopic:@[]];
+//    TopicRequest *request = [[TopicRequest alloc] init];
+//    [request netRequestWithSuccess:^(id  _Nonnull response) {
+//        [self createTopic:response[@"data"]];
+//    } error:^{
+//
+//    } failure:^(NSString * _Nonnull msg) {
+//
+//    }];
+}
+
+- (void)createTopic:(NSArray *)array {
+   
+    array = @[@"",@"",@""];
     NSInteger count = array.count;
     if (count > 3) {
         count = 3;
     }
     
     for (int i = 0; i < count; i++) {
-        HotCourseView *view = [[HotCourseView alloc] initWithFrame:CGRectMake(SCALE_SIZE(15), _hotView.frame.size.height+_hotView.frame.origin.y+SCALE_SIZE(18)+SCALE_SIZE(120)*i, iPhoneWidth-SCALE_SIZE(30), SCALE_SIZE(106)) data:array[i]];
-        view.tag = 200 + i;
-        [self.scrollView addSubview:view];
+        TopicView *view = [[TopicView alloc] initWithFrame:CGRectMake(SCALE_SIZE(15)+SCALE_SIZE(245)*i, 0, SCALE_SIZE(230), SCALE_SIZE(183)) data:array[i]];
+//        view.tag = 300 + i;
+        [self.topicScrollView addSubview:view];
     }
+    self.topicScrollView.contentSize = CGSizeMake(SCALE_SIZE(15)+SCALE_SIZE(245)*count, 0);
     
 }
 
@@ -190,8 +234,26 @@
             @strongify(self);
             [self getCourseListWithType:type];
         };
+        [self getCourseListWithType:10];
     }
     return _hotView;
 }
 
+- (TitleView *)topicTitleView {
+    if (!_topicTitleView) {
+        _topicTitleView = [[TitleView alloc] initWithFrame:CGRectMake(0, _hotView.frame.size.height+_hotView.frame.origin.y+SCALE_SIZE(18)+SCALE_SIZE(120)*self.hotCount, iPhoneWidth, SCALE_SIZE(30)) title:@"精品专题"];
+        _topicTitleView.block = ^{
+            
+        };
+    }
+    return _topicTitleView;
+}
+
+- (UIScrollView *)topicScrollView {
+    if (!_topicScrollView) {
+        _topicScrollView = [[UIScrollView alloc] init];
+        _topicScrollView.showsHorizontalScrollIndicator = NO;
+    }
+    return _topicScrollView;
+}
 @end

@@ -23,6 +23,8 @@
 		EFBF77F6298A5AA200048CDE /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77F5298A5AA200048CDE /* TitleView.m */; };
 		EFBF77FA298A606800048CDE /* HotView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77F9298A606800048CDE /* HotView.m */; };
 		EFBF77FD298A629500048CDE /* HotCourseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77FC298A629500048CDE /* HotCourseRequest.m */; };
+		EFC2AA512990EF6B0088EA07 /* TopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC2AA502990EF6B0088EA07 /* TopicView.m */; };
+		EFC2AA542990F0230088EA07 /* TopicRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC2AA532990F0230088EA07 /* TopicRequest.m */; };
 		EFCC737529669E3B00FD69BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC737429669E3B00FD69BC /* AppDelegate.m */; };
 		EFCC737E29669E3B00FD69BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCC737C29669E3B00FD69BC /* Main.storyboard */; };
 		EFCC738029669E3D00FD69BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCC737F29669E3D00FD69BC /* Assets.xcassets */; };
@@ -87,6 +89,10 @@
 		EFBF77F9298A606800048CDE /* HotView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotView.m; sourceTree = "<group>"; };
 		EFBF77FB298A629500048CDE /* HotCourseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotCourseRequest.h; sourceTree = "<group>"; };
 		EFBF77FC298A629500048CDE /* HotCourseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotCourseRequest.m; sourceTree = "<group>"; };
+		EFC2AA4F2990EF6B0088EA07 /* TopicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicView.h; sourceTree = "<group>"; };
+		EFC2AA502990EF6B0088EA07 /* TopicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicView.m; sourceTree = "<group>"; };
+		EFC2AA522990F0230088EA07 /* TopicRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicRequest.h; sourceTree = "<group>"; };
+		EFC2AA532990F0230088EA07 /* TopicRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicRequest.m; sourceTree = "<group>"; };
 		EFCC737029669E3B00FD69BC /* Pepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCC737329669E3B00FD69BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFCC737429669E3B00FD69BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -192,9 +198,9 @@
 		EF0D15042966BEE8005ADD55 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EFC2AA552990FA510088EA07 /* Home */,
 				47F15427298A56C900C4C8A2 /* Photo */,
 				47F1541F29891A4000C4C8A2 /* Personal */,
-				EFB6E29E2967B4F000185630 /* Views */,
 			);
 			path = Module;
 			sourceTree = "<group>";
@@ -202,7 +208,6 @@
 		EFB6E29E2967B4F000185630 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				EFBF77F7298A5E9F00048CDE /* Request */,
 				EFB6E29F2967B4FE00185630 /* SubViews */,
 				EF0D15012966BEE3005ADD55 /* HomeViewController.h */,
 				EF0D15022966BEE3005ADD55 /* HomeViewController.m */,
@@ -225,6 +230,8 @@
 				EFBF77F9298A606800048CDE /* HotView.m */,
 				EFB6D621298BA44B001D5834 /* HotCourseView.h */,
 				EFB6D622298BA44B001D5834 /* HotCourseView.m */,
+				EFC2AA4F2990EF6B0088EA07 /* TopicView.h */,
+				EFC2AA502990EF6B0088EA07 /* TopicView.m */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -236,8 +243,19 @@
 				EFBF77FC298A629500048CDE /* HotCourseRequest.m */,
 				EFB6D61E298BA153001D5834 /* HotCourseListRequest.h */,
 				EFB6D61F298BA153001D5834 /* HotCourseListRequest.m */,
+				EFC2AA522990F0230088EA07 /* TopicRequest.h */,
+				EFC2AA532990F0230088EA07 /* TopicRequest.m */,
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		EFC2AA552990FA510088EA07 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EFBF77F7298A5E9F00048CDE /* Request */,
+				EFB6E29E2967B4F000185630 /* Views */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 		EFCC736729669E3B00FD69BC = {
@@ -499,6 +517,8 @@
 				EF0D15032966BEE3005ADD55 /* HomeViewController.m in Sources */,
 				EFB6D623298BA44B001D5834 /* HotCourseView.m in Sources */,
 				EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */,
+				EFC2AA542990F0230088EA07 /* TopicRequest.m in Sources */,
+				EFC2AA512990EF6B0088EA07 /* TopicView.m in Sources */,
 				EFB6E2A82967F96500185630 /* ScanView.m in Sources */,
 				EFBF77F6298A5AA200048CDE /* TitleView.m in Sources */,
 				EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */,
