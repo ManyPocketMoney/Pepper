@@ -9,7 +9,11 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
+typedef void(^HotViewBlock)(int type);
+
 @interface HotView : UIView
+
+@property (nonatomic, copy) HotViewBlock block;
 
 @end
 

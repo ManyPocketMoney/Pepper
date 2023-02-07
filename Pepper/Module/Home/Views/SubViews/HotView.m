@@ -14,21 +14,25 @@
 
 - (instancetype)initWithFrame:(CGRect)frame {
     if (self = [super initWithFrame:frame]) {
-        HotCourseRequest *request = [[HotCourseRequest alloc] init];
-        [request netRequestWithSuccess:^(id  _Nonnull response) {
-            self->_array = response[@"data"];
+        _array = @[@{@"title":@"文档表格",@"type":@"10"},
+                   @{@"title":@"PPT中级",@"type":@"20"},
+                   @{@"title":@"CAD学习",@"type":@"30"},
+                   @{@"title":@"教师资格证",@"type":@"40"}];
+//        HotCourseRequest *request = [[HotCourseRequest alloc] init];
+//        [request netRequestWithSuccess:^(id  _Nonnull response) {
+//            self->_array = response[@"data"];
             [self createInterface];
-        } error:^{
-            
-        } failure:^(NSString * _Nonnull msg) {
-            
-        }];
+//        } error:^{
+//
+//        } failure:^(NSString * _Nonnull msg) {
+//
+//        }];
     }
     return self;
 }
 
 - (void)createInterface {
-    _array = @[@"",@"",@"",@"",@"",@""];
+   
     
     UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, iPhoneWidth, self.frame.size.height)];
     scrollView.contentSize = CGSizeMake(SCALE_SIZE(15)+SCALE_SIZE(100)*_array.count, 0);
@@ -36,9 +40,9 @@
     [self addSubview:scrollView];
     
     for (int i = 0; i < _array.count; i++) {
-        
+        NSDictionary *dic = _array[i];
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-        [button setTitle:@"文档表格" forState:UIControlStateNormal];
+        [button setTitle:dic[@"title"] forState:UIControlStateNormal];
         [button setTitleColor:BASECOLOR_BLACK_999 forState:UIControlStateNormal];
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateSelected];
         [button setBackgroundImage:[UIImage imageWithColor:[UIColor hexStringToColor:@"#D4E1EE"]] forState:UIControlStateNormal];
@@ -59,7 +63,7 @@
         
         if (i == 0) {
             button.selected = YES;
-            
+//            self.block(10);
         }
     }
 }
@@ -70,6 +74,8 @@
         btn.selected = NO;
     }
     button.selected = YES;
+    NSDictionary *dic = _array[button.tag-100];
+    self.block([dic[@"type"] intValue]);
 }
 
 @end
