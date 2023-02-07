@@ -17,6 +17,7 @@
 #import "HotCourseView.h"
 #import "TopicView.h"
 #import "TopicRequest.h"
+#import "ConversionViewController.h"
 
 @interface HomeViewController ()
 
@@ -39,7 +40,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBar.hidden = YES;
+    
     self.view.backgroundColor = BASECOLOR_BACKGROUND_GRAY;
     [self.view addSubview:self.navigationView];
     [self.scrollView addSubview:self.searchView];
@@ -55,9 +56,20 @@
     
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    self.navigationController.navigationBar.hidden = NO;
+}
+
 /// 文件转化点击
 - (void)conversionBtnClick {
-    
+    ConversionViewController *vc = [[ConversionViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 /// 拍照翻译点击

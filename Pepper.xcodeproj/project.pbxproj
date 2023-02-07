@@ -26,6 +26,10 @@
 		EFBF77FD298A629500048CDE /* HotCourseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77FC298A629500048CDE /* HotCourseRequest.m */; };
 		EFC2AA512990EF6B0088EA07 /* TopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC2AA502990EF6B0088EA07 /* TopicView.m */; };
 		EFC2AA542990F0230088EA07 /* TopicRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC2AA532990F0230088EA07 /* TopicRequest.m */; };
+		EFCA98F52992180F0068ECB5 /* ConversionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCA98F42992180F0068ECB5 /* ConversionViewController.m */; };
+		EFCA98F92992227C0068ECB5 /* GetConversionTokenRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCA98F82992227C0068ECB5 /* GetConversionTokenRequest.m */; };
+		EFCA98FC29922C170068ECB5 /* ConversionHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCA98FB29922C170068ECB5 /* ConversionHistoryViewController.m */; };
+		EFCA990029924A040068ECB5 /* ConversionFileUploadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCA98FF29924A040068ECB5 /* ConversionFileUploadRequest.m */; };
 		EFCC737529669E3B00FD69BC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCC737429669E3B00FD69BC /* AppDelegate.m */; };
 		EFCC737E29669E3B00FD69BC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EFCC737C29669E3B00FD69BC /* Main.storyboard */; };
 		EFCC738029669E3D00FD69BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EFCC737F29669E3D00FD69BC /* Assets.xcassets */; };
@@ -96,6 +100,15 @@
 		EFC2AA502990EF6B0088EA07 /* TopicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicView.m; sourceTree = "<group>"; };
 		EFC2AA522990F0230088EA07 /* TopicRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicRequest.h; sourceTree = "<group>"; };
 		EFC2AA532990F0230088EA07 /* TopicRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicRequest.m; sourceTree = "<group>"; };
+		EFCA98F32992180F0068ECB5 /* ConversionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversionViewController.h; sourceTree = "<group>"; };
+		EFCA98F42992180F0068ECB5 /* ConversionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversionViewController.m; sourceTree = "<group>"; };
+		EFCA98F72992227C0068ECB5 /* GetConversionTokenRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GetConversionTokenRequest.h; sourceTree = "<group>"; };
+		EFCA98F82992227C0068ECB5 /* GetConversionTokenRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GetConversionTokenRequest.m; sourceTree = "<group>"; };
+		EFCA98FA29922C170068ECB5 /* ConversionHistoryViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversionHistoryViewController.h; sourceTree = "<group>"; };
+		EFCA98FB29922C170068ECB5 /* ConversionHistoryViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversionHistoryViewController.m; sourceTree = "<group>"; };
+		EFCA98FD299236900068ECB5 /* Pepper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pepper.entitlements; sourceTree = "<group>"; };
+		EFCA98FE29924A040068ECB5 /* ConversionFileUploadRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ConversionFileUploadRequest.h; sourceTree = "<group>"; };
+		EFCA98FF29924A040068ECB5 /* ConversionFileUploadRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ConversionFileUploadRequest.m; sourceTree = "<group>"; };
 		EFCC737029669E3B00FD69BC /* Pepper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pepper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EFCC737329669E3B00FD69BC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EFCC737429669E3B00FD69BC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -203,6 +216,7 @@
 		EF0D15042966BEE8005ADD55 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				EFCA98F0299217DC0068ECB5 /* Conversion */,
 				EFC2AA552990FA510088EA07 /* Home */,
 				47F15427298A56C900C4C8A2 /* Photo */,
 				47F1541F29891A4000C4C8A2 /* Personal */,
@@ -263,6 +277,37 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		EFCA98F0299217DC0068ECB5 /* Conversion */ = {
+			isa = PBXGroup;
+			children = (
+				EFCA98F6299222620068ECB5 /* Request */,
+				EFCA98F2299217F90068ECB5 /* Views */,
+			);
+			path = Conversion;
+			sourceTree = "<group>";
+		};
+		EFCA98F2299217F90068ECB5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				EFCA98F32992180F0068ECB5 /* ConversionViewController.h */,
+				EFCA98F42992180F0068ECB5 /* ConversionViewController.m */,
+				EFCA98FA29922C170068ECB5 /* ConversionHistoryViewController.h */,
+				EFCA98FB29922C170068ECB5 /* ConversionHistoryViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		EFCA98F6299222620068ECB5 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				EFCA98F72992227C0068ECB5 /* GetConversionTokenRequest.h */,
+				EFCA98F82992227C0068ECB5 /* GetConversionTokenRequest.m */,
+				EFCA98FE29924A040068ECB5 /* ConversionFileUploadRequest.h */,
+				EFCA98FF29924A040068ECB5 /* ConversionFileUploadRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 		EFCC736729669E3B00FD69BC = {
 			isa = PBXGroup;
 			children = (
@@ -288,6 +333,7 @@
 		EFCC737229669E3B00FD69BC /* Pepper */ = {
 			isa = PBXGroup;
 			children = (
+				EFCA98FD299236900068ECB5 /* Pepper.entitlements */,
 				EF0D15042966BEE8005ADD55 /* Module */,
 				EFCC73AA2966A8A400FD69BC /* Base */,
 				EFCC737329669E3B00FD69BC /* AppDelegate.h */,
@@ -521,6 +567,7 @@
 				EFCC73B12966AA5000FD69BC /* ANRouterSpec+Pepper.m in Sources */,
 				EF0D15032966BEE3005ADD55 /* HomeViewController.m in Sources */,
 				EFB6D623298BA44B001D5834 /* HotCourseView.m in Sources */,
+				EFCA98F52992180F0068ECB5 /* ConversionViewController.m in Sources */,
 				EF0D15002966B01F005ADD55 /* NSString+Empty.m in Sources */,
 				EFC2AA542990F0230088EA07 /* TopicRequest.m in Sources */,
 				EFC2AA512990EF6B0088EA07 /* TopicView.m in Sources */,
@@ -529,6 +576,9 @@
 				EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */,
 				EFCC738629669E3D00FD69BC /* main.m in Sources */,
 				47F1542329891AB200C4C8A2 /* QJPersonalViewController.m in Sources */,
+				EFCA98FC29922C170068ECB5 /* ConversionHistoryViewController.m in Sources */,
+				EFCA98F92992227C0068ECB5 /* GetConversionTokenRequest.m in Sources */,
+				EFCA990029924A040068ECB5 /* ConversionFileUploadRequest.m in Sources */,
 				EFB6E2A22967B5B800185630 /* NavigationView.m in Sources */,
 				EFCC738629669E3D00FD69BC /* main.m in Sources */,
 				47F1542E298B9BA600C4C8A2 /* QJPhotoDistinguishResultVC.m in Sources */,
@@ -709,9 +759,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pepper/Pepper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XHN7V8ZX49;
+				DEVELOPMENT_TEAM = LSRUARV39N;
 				GCC_PREFIX_HEADER = Pepper/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pepper/Info.plist;
@@ -728,7 +779,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gp.Pepper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.intel.Pepper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -741,9 +792,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Pepper/Pepper.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = XHN7V8ZX49;
+				DEVELOPMENT_TEAM = LSRUARV39N;
 				GCC_PREFIX_HEADER = Pepper/PrefixHeader.pch;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Pepper/Info.plist;
@@ -760,7 +812,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.gp.Pepper;
+				PRODUCT_BUNDLE_IDENTIFIER = com.intel.Pepper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
