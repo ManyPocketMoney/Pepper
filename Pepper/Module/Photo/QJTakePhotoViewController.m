@@ -6,7 +6,7 @@
 //
 
 #import "QJTakePhotoViewController.h"
-
+#import "QJPhotoDistinguishResultVC.h"
 
 #import <CommonCrypto/CommonDigest.h>
 #import <CommonCrypto/CommonHMAC.h>
@@ -114,14 +114,17 @@
 }
 #pragma mark ====中间确认按钮
 - (void)photo_pButtonClick:(UIButton *)sender {
-    AVCaptureConnection *conntion = [self.imageOutput connectionWithMediaType:AVMediaTypeVideo];
-    if (!conntion) {
-        NSLog(@"拍照失败!");
-        return;
-    }
-    AVCapturePhotoSettings *settings = [[AVCapturePhotoSettings alloc] init];
-    settings.flashMode = self.isFlashLampMode;
-    [self.imageOutput capturePhotoWithSettings:settings delegate:self];
+//    AVCaptureConnection *conntion = [self.imageOutput connectionWithMediaType:AVMediaTypeVideo];
+//    if (!conntion) {
+//        NSLog(@"拍照失败!");
+//        return;
+//    }
+//    AVCapturePhotoSettings *settings = [[AVCapturePhotoSettings alloc] init];
+//    settings.flashMode = self.isFlashLampMode;
+//    [self.imageOutput capturePhotoWithSettings:settings delegate:self];
+    
+    QJPhotoDistinguishResultVC *vc = [[QJPhotoDistinguishResultVC alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 #pragma mark ====手电筒确认按钮
 - (void)lampButtonClick:(UIButton *)sender {
