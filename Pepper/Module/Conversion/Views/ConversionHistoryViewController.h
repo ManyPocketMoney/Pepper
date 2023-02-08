@@ -12,8 +12,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface ConversionHistoryViewController : BaseViewController
 
 @property (nonatomic, copy) NSString *fileName;
-@property (nonatomic, strong) NSData *fileData;
 @property (nonatomic, strong) NSURL *fileUrl;
+@property (nonatomic, strong) NSDictionary *info;
+@property (nonatomic, assign) NSInteger index;
 
 @end
 

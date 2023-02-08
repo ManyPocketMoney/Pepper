@@ -14,38 +14,38 @@ PODS:
   - AFNetworking/Serialization (4.0.1)
   - AFNetworking/UIKit (4.0.1):
     - AFNetworking/NSURLSession
-  - ANCore (0.7.5):
-    - ANCore/Category (= 0.7.5)
-    - ANCore/CrashGuard (= 0.7.5)
-    - ANCore/Macros (= 0.7.5)
-    - ANCore/Network (= 0.7.5)
-    - ANCore/OpenShareManager (= 0.7.5)
-    - ANCore/Router (= 0.7.5)
-    - ANCore/UI (= 0.7.5)
-    - ANCore/Utils (= 0.7.5)
+  - ANCore (0.7.7):
+    - ANCore/Category (= 0.7.7)
+    - ANCore/CrashGuard (= 0.7.7)
+    - ANCore/Macros (= 0.7.7)
+    - ANCore/Network (= 0.7.7)
+    - ANCore/OpenShareManager (= 0.7.7)
+    - ANCore/Router (= 0.7.7)
+    - ANCore/UI (= 0.7.7)
+    - ANCore/Utils (= 0.7.7)
     - MBProgressHUD
-  - ANCore/Category (0.7.5):
+  - ANCore/Category (0.7.7):
     - MBProgressHUD
     - MJRefresh
-  - ANCore/CrashGuard (0.7.5):
+  - ANCore/CrashGuard (0.7.7):
     - MBProgressHUD
-  - ANCore/Macros (0.7.5):
+  - ANCore/Macros (0.7.7):
     - MBProgressHUD
-  - ANCore/Network (0.7.5):
+  - ANCore/Network (0.7.7):
     - AFNetworking
     - MBProgressHUD
-  - ANCore/OpenShareManager (0.7.5):
+  - ANCore/OpenShareManager (0.7.7):
     - MBProgressHUD
-  - ANCore/Router (0.7.5):
-    - ANCore/Router/Handler (= 0.7.5)
+  - ANCore/Router (0.7.7):
+    - ANCore/Router/Handler (= 0.7.7)
     - MBProgressHUD
-  - ANCore/Router/Handler (0.7.5):
+  - ANCore/Router/Handler (0.7.7):
     - MBProgressHUD
-  - ANCore/UI (0.7.5):
+  - ANCore/UI (0.7.7):
     - ANCore/Category
     - ANCore/Macros
     - MBProgressHUD
-  - ANCore/Utils (0.7.5):
+  - ANCore/Utils (0.7.7):
     - MBProgressHUD
   - JSONModel (1.8.0)
   - Masonry (1.1.0)
@@ -72,8 +72,8 @@ SPEC REPOS:
     - SDWebImage
 
 SPEC CHECKSUMS:
-  AFNetworking: 7864c38297c79aaca1500c33288e429c3451fdce
-  ANCore: 93abc6849ba685a4f8606bf7685d7826b837349e
+  AFNetworking: 3bd23d814e976cd148d7d44c3ab78017b744cd58
+  ANCore: 8c5217b7a8c2b0c15f62e100502faabb1ab552fd
   JSONModel: 02ab723958366a3fd27da57ea2af2113658762e9
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MBProgressHUD: 3ee5efcc380f6a79a7cc9b363dd669c5e1ae7406

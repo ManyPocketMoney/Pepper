@@ -15,9 +15,9 @@
 }
 
 - (NSString *)requestUrl {
-    return [NSString stringWithFormat:@"/upload?handle_type=%@&option=%@",_type,_op];
-
+    return @"/upload";
 }
+
 
 - (NSString *)baseUrl {
     return @"http://103.45.249.71:8080";
@@ -26,6 +26,16 @@
 - (RequestMethodType)requestMethodType {
     return RequestMethodTypePOST;
 }
+
+/// 请求参数
+- (nullable id)requestArgument {
+    NSMutableDictionary *params = [[super requestArgument] mutableCopy];
+    [params setObject:_type forKey:@"handle_type"];
+    [params setObject:_op forKey:@"option"];
+    [params setObject:@"WU_FILE_0" forKey:@"id"];
+    return params;
+}
+
 
 - (NSURL *)filePathURL {
     return _filePathURL;
@@ -42,18 +52,15 @@
     if (!token) {
         token = @"";
     }
-    NSString *boundary = [NSString stringWithFormat:@"Boundary+%08X%08X", arc4random(), arc4random()];
-    return @{@"Authorization":token,
-             @"Content-Type":[NSString stringWithFormat:@"multipart/form-data; boundary=%@",boundary]
-    };
+    return @{@"Authorization":token};
 }
 
-- (instancetype)initWithFilePathURL:(NSURL *)filePathURL {
+- (instancetype)initWithFilePathURL:(NSURL *)filePathURL type:(NSString *)type format:(NSString *)format {
     if (self = [super init]) {
         _filePathURL = filePathURL;
 
-        _type = @"pdf2word";
-        _op = [self convertToJsonData:@{@"data_format":@"doc"}] ;
+        _type = type;
+        _op = [self convertToJsonData:@{@"data_format":format}];
         
     }
     return self;

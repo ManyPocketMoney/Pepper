@@ -11,7 +11,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ConversionFileUploadRequest : BaseRequest
 
-- (instancetype)initWithFilePathURL:(NSURL *)filePathURL;
+- (instancetype)initWithFilePathURL:(NSURL *)filePathURL type:(NSString *)type format:(NSString *)format;
 
 @end
 

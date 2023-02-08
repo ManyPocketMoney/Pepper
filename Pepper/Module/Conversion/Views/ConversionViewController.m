@@ -13,6 +13,8 @@
 
 @property (nonatomic, strong) UIDocumentPickerViewController *documentPicker;
 @property (nonatomic, copy) NSArray *types;
+@property (nonatomic, assign) NSInteger selectedIndex;
+@property (nonatomic, strong) NSArray *array;
 
 @end
 
@@ -38,20 +40,20 @@
         make.height.mas_equalTo(SCALE_SIZE(146));
     }];
     
-    NSArray *array = @[@{@"title":@"pdf转word",@"image":@"word"},
-                       @{@"title":@"pdf转excel",@"image":@"excel"},
-                       @{@"title":@"word转pdf",@"image":@"pdf"},
-                       @{@"title":@"ppt转pdf",@"image":@"pdf"},
-                       @{@"title":@"pdf转ppt",@"image":@"ppt"},
-                       @{@"title":@"pdf转txt",@"image":@"txt"}];
+    self.array = @[@{@"title":@"pdf转word",@"image":@"word",@"type":@"pdf2word",@"format":@"docx"},
+                   @{@"title":@"pdf转excel",@"image":@"excel",@"type":@"pdf2excel",@"format":@"xlsx"},
+                   @{@"title":@"word转pdf",@"image":@"pdf",@"type":@"word2pdf",@"format":@"pdf"},
+                   @{@"title":@"ppt转pdf",@"image":@"pdf",@"type":@"ppt2pdf",@"format":@"pdf"},
+                   @{@"title":@"pdf转ppt",@"image":@"ppt",@"type":@"pdf2ppt",@"format":@"pptx"},
+                   @{@"title":@"pdf转txt",@"image":@"txt",@"type":@"pdf2txt",@"format":@"txt"}];
     
     CycleUtil *util = [[CycleUtil alloc] init];
     util.column = 2;
     util.height = SCALE_SIZE(165);
     util.topSpace = SCALE_SIZE(180);
     util.leftSpace = SCALE_SIZE(15);
-    [util cycleWithCount:array.count cycleViewBlock:^(NSInteger index, CGRect rect) {
-        NSDictionary *dic = array[index];
+    [util cycleWithCount:self.array.count cycleViewBlock:^(NSInteger index, CGRect rect) {
+        NSDictionary *dic = self.array[index];
         ANButton *button = [ANButton buttonWithType:UIButtonTypeCustom];
         [button setImage:[UIImage imageNamed:dic[@"image"]] forState:UIControlStateNormal];
         [button setImage:[UIImage imageNamed:dic[@"image"]] forState:UIControlStateHighlighted];
@@ -75,6 +77,7 @@
         .actionTitles(@[@"文件库导入",@"QQ、微信导入",@"取消"]);
     } handler:^(int index) {
         if (index == 0) {
+            self.selectedIndex = button.tag-100;
             [self presentViewController:self.documentPicker animated:YES completion:nil];
         }
     }];
@@ -90,17 +93,18 @@
             /// 读取文件
             NSString *fileName = [newURL lastPathComponent];
             NSError *error = nil;
-            NSData *fileData = [NSData dataWithContentsOfURL:newURL options:NSDataReadingMappedIfSafe error:&error];
+//            NSData *fileData = [NSData dataWithContentsOfURL:newURL options:NSDataReadingMappedIfSafe error:&error];
             
             NSLog(@"名字:%@",fileName);
-            NSLog(@"文件:%@",fileData);
+//            NSLog(@"文件:%@",fileData);
             if (error) {
                 
             } else {
                 ConversionHistoryViewController *vc = [[ConversionHistoryViewController alloc] init];
                 vc.fileName = fileName;
-                vc.fileData = fileData;
                 vc.fileUrl = newURL;
+                vc.info = self.array[self.selectedIndex];
+                vc.index = self.selectedIndex;
                 [self.navigationController pushViewController:vc animated:NO];
             }
             /// 写入沙盒

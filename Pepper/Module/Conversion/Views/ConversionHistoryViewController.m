@@ -7,6 +7,7 @@
 
 #import "ConversionHistoryViewController.h"
 #import "ConversionFileUploadRequest.h"
+#import "FileDownloadRequest.h"
 
 @interface ConversionHistoryViewController ()
 
@@ -17,11 +18,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"转化历史";
-    [self.dataSource addObject:@{@"name":self.fileName,@"data":self.fileData,@"url":self.fileUrl}];
+    [self.dataSource addObject:@{@"name":self.fileName,@"url":self.fileUrl}];
     [self createInterface];
 }
 
 - (void)createInterface {
+    
+    if ((self.index == 0 || self.index == 1 || self.index == 4 || self.index == 5) && ![self.fileUrl.pathExtension isEqualToString:@"pdf"]) {
+        [ProgressHUDManager showHUDAutoHiddenWithWarning:@"请选择PDF类型的文件"];
+        [self.navigationController popViewControllerAnimated:NO];
+        return;
+    }
+    
+    else if (self.index == 2 && !([self.fileUrl.pathExtension isEqualToString:@"doc"] || [self.fileUrl.pathExtension isEqualToString:@"docx"])) {
+        [ProgressHUDManager showHUDAutoHiddenWithWarning:@"请选择WORD类型的文件"];
+        [self.navigationController popViewControllerAnimated:NO];
+        return;
+    }
+    
+    else if (self.index == 3 && !([self.fileUrl.pathExtension isEqualToString:@"ppt"] || [self.fileUrl.pathExtension isEqualToString:@"pptx"])) {
+        [ProgressHUDManager showHUDAutoHiddenWithWarning:@"请选择PPT类型的文件"];
+        [self.navigationController popViewControllerAnimated:NO];
+        return;
+    }
+    
+    NSString *name = @"pdf";
+    if ([self.fileUrl.pathExtension isEqualToString:@"pdf"]) {
+        name = @"pdf";
+    } else if ([self.fileUrl.pathExtension isEqualToString:@"doc"] || [self.fileUrl.pathExtension isEqualToString:@"docx"]) {
+        name = @"word";
+    } else if ([self.fileUrl.pathExtension isEqualToString:@"ppt"] || [self.fileUrl.pathExtension isEqualToString:@"pptx"]) {
+        name = @"ppt";
+    } else if ([self.fileUrl.pathExtension isEqualToString:@"xls"] || [self.fileUrl.pathExtension isEqualToString:@"xlsx"]) {
+        name = @"excel";
+    } else if ([self.fileUrl.pathExtension isEqualToString:@"txt"]) {
+        name = @"txt";
+    }
+    
     
     for (int i = 0; i < self.dataSource.count; i++) {
         NSDictionary *dic = self.dataSource[i];
@@ -38,7 +71,7 @@
             make.top.mas_equalTo(SCALE_SIZE(30));
         }];
         
-        UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"pdf"]];
+        UIImageView *imgView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:name]];
         [backView addSubview:imgView];
         
         [imgView mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -68,7 +101,6 @@
         [button setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         button.titleLabel.font = FONTSIZE_MEDIUM(15);
         [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-//        button.tag = 100 + i;
         [backView addSubview:button];
         
         if (i == 0) {
@@ -89,10 +121,11 @@
 - (void)buttonClick:(UIButton *)button {
     if ([button.currentTitle isEqualToString:@"现在转化"]) {
         [ProgressHUDManager showHUDWithText:@"正在生成中..."];
-        ConversionFileUploadRequest *request = [[ConversionFileUploadRequest alloc] initWithFilePathURL:self.fileUrl];
-
+        
+        ConversionFileUploadRequest *request = [[ConversionFileUploadRequest alloc] initWithFilePathURL:self.fileUrl type:self.info[@"type"] format:self.info[@"format"]];
+        
         [request netRequestUploadMedia:UploadMediaFileType success:^(id  _Nonnull response) {
-            
+            [self downloadFileWithType:response[@"data"][@"handle_type"] fileKey:response[@"data"][@"file_key"]];
         } error:^{
             
         } progress:^(NSProgress * _Nonnull progress) {
@@ -101,6 +134,19 @@
             
         }];
     }
+}
+
+- (void)downloadFileWithType:(NSString *)type fileKey:(NSString *)fileKey {
+    FileDownloadRequest *request = [[FileDownloadRequest alloc] initWithType:type fileKey:fileKey];
+    [request netRequestDownloadFileWithSuccess:^(id  _Nonnull response) {
+        
+    } error:^{
+        
+    } progress:^(NSProgress * _Nonnull progress) {
+        
+    } failure:^(NSString * _Nonnull msg) {
+        
+    }];
 }
 
 @end

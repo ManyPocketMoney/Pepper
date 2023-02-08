@@ -24,6 +24,7 @@
 		EFBF77F6298A5AA200048CDE /* TitleView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77F5298A5AA200048CDE /* TitleView.m */; };
 		EFBF77FA298A606800048CDE /* HotView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77F9298A606800048CDE /* HotView.m */; };
 		EFBF77FD298A629500048CDE /* HotCourseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFBF77FC298A629500048CDE /* HotCourseRequest.m */; };
+		EFC2112629933E3600C16573 /* FileDownloadRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC2112529933E3600C16573 /* FileDownloadRequest.m */; };
 		EFC2AA512990EF6B0088EA07 /* TopicView.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC2AA502990EF6B0088EA07 /* TopicView.m */; };
 		EFC2AA542990F0230088EA07 /* TopicRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = EFC2AA532990F0230088EA07 /* TopicRequest.m */; };
 		EFCA98F52992180F0068ECB5 /* ConversionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFCA98F42992180F0068ECB5 /* ConversionViewController.m */; };
@@ -96,6 +97,8 @@
 		EFBF77F9298A606800048CDE /* HotView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotView.m; sourceTree = "<group>"; };
 		EFBF77FB298A629500048CDE /* HotCourseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HotCourseRequest.h; sourceTree = "<group>"; };
 		EFBF77FC298A629500048CDE /* HotCourseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HotCourseRequest.m; sourceTree = "<group>"; };
+		EFC2112429933E3600C16573 /* FileDownloadRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FileDownloadRequest.h; sourceTree = "<group>"; };
+		EFC2112529933E3600C16573 /* FileDownloadRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FileDownloadRequest.m; sourceTree = "<group>"; };
 		EFC2AA4F2990EF6B0088EA07 /* TopicView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicView.h; sourceTree = "<group>"; };
 		EFC2AA502990EF6B0088EA07 /* TopicView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TopicView.m; sourceTree = "<group>"; };
 		EFC2AA522990F0230088EA07 /* TopicRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TopicRequest.h; sourceTree = "<group>"; };
@@ -304,6 +307,8 @@
 				EFCA98F82992227C0068ECB5 /* GetConversionTokenRequest.m */,
 				EFCA98FE29924A040068ECB5 /* ConversionFileUploadRequest.h */,
 				EFCA98FF29924A040068ECB5 /* ConversionFileUploadRequest.m */,
+				EFC2112429933E3600C16573 /* FileDownloadRequest.h */,
+				EFC2112529933E3600C16573 /* FileDownloadRequest.m */,
 			);
 			path = Request;
 			sourceTree = "<group>";
@@ -586,6 +591,7 @@
 				47F1542A298A570100C4C8A2 /* QJTakePhotoViewController.m in Sources */,
 				EFB6D620298BA153001D5834 /* HotCourseListRequest.m in Sources */,
 				EFB6E2A52967EC5500185630 /* SearchView.m in Sources */,
+				EFC2112629933E3600C16573 /* FileDownloadRequest.m in Sources */,
 				EFCC73B42966AB9E00FD69BC /* BaseNavigationController.m in Sources */,
 				EFB6D61D298B9A60001D5834 /* UIImage+ZBColor.m in Sources */,
 			);
